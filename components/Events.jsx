@@ -4,7 +4,7 @@ import EventCalendar from './EventCalendar'
 
 export default function Events() {
   return (
-    <div id="Events" className="flex flex-col items-center justify-center min-h-screen">
+    <div id="events" className="flex flex-col items-center justify-center min-h-screen">
         <p class="text-2xl text-center ...">Events</p>
         <EventCalendar />
         <Link href="/pastEvents" legacyBehavior>

@@ -5,6 +5,8 @@ import Events from '@/components/Events'
 import Sponsors from '@/components/Sponsors'
 import TestFirebase from '@/components/TestFirebase'
 import Hero from '@/components/Hero'
+import Contact from '@/components/Contact'
+import FAQ from '@/components/FAQ'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -20,7 +22,9 @@ export default function Home() {
       <About />
       <Events />
       <Sponsors />
-      <TestFirebase />
+      <FAQ />
+      <Contact />
+      {/* <TestFirebase /> */}
     </main>
     </>
   )
