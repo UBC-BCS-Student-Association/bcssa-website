@@ -1,0 +1,10 @@
+.accordionContainer {
+    width: 500px;
+}
+  
+.accordionItem,
+.accordionTrigger,
+.accordionContent {
+    width: 100%;
+}
+  
