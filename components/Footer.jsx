@@ -7,7 +7,7 @@ import {
   faMedium,
   faTwitter,
   faYoutube,
-} from '@fortawesome/react-fontawesome';
+} from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
     return (
@@ -16,20 +16,16 @@ export default function Footer() {
           <a
             href='https://www.facebook.com/groups/ubcbcsclub/'
             target='_blank'
-            class="p-4"
             rel='noreferrer'
           >
             <FontAwesomeIcon icon={faFacebook} />
-            facebook
           </a>
           <a
             href='https://www.linkedin.com/groups/14108803/'
             target='_blank'
-            class="p-4"
             rel='noreferrer'
           >
             <FontAwesomeIcon icon={faLinkedinIn} />
-            linkedin
           </a>
             <p>Copyright &copy; 2023 BCSSA</p>
         </footer>
