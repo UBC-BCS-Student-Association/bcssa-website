@@ -13,32 +13,6 @@ const MENU_LIST = [
     { text: "Contact", href: "/#contact" },
 ];
 
-// const NavItem = ({ text, href, active }) => {
-//   const handleClick = (e) => {
-//     if (href.startsWith("/#")) { // Check if the link is an internal anchor
-//       e.preventDefault();
-//       const targetElement = document.querySelector(href.substring(1));
-//       if (targetElement) {
-//         targetElement.scrollIntoView({ behavior: 'smooth' });
-//       }
-//     }
-//   };
-
-//   return (
-//     // <a href={href} onClick={handleClick} className={`${styles.navLink} ${active ? styles.active : ""}`}>
-//     //   {text}
-//     // </a>
-//     <Link href={href} legacyBehavior>
-//       <a onClick={handleClick} className={`${styles.navLink} ${active ? styles.active : ""}`}>{text}</a>
-//     </Link>
-//   );
-//   // return (
-//   //   <Link href={href} legacyBehavior>
-//   //     <a className={`${styles.navLink} ${active ? styles.active : ""}`}>{text}</a>
-//   //   </Link>
-//   // );
-// };
-
 const Navbar = () => {
   const [navActive, setNavActive] = useState(null);
   const [activeIdx, setActiveIdx] = useState(-1);
