@@ -23,7 +23,6 @@ export default function Home() {
       <Sponsors />
       <FAQ />
       <Contact />
-      <Footer />
       {/* <TestFirebase /> */}
     </main>
     </>
