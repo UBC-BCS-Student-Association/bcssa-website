@@ -6,6 +6,7 @@ import TestFirebase from '@/components/TestFirebase'
 import Hero from '@/components/Hero'
 import Contact from '@/components/Contact'
 import FAQ from '@/components/FAQ'
+import Footer from '@/components/Footer'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -22,6 +23,7 @@ export default function Home() {
       <Sponsors />
       <FAQ />
       <Contact />
+      <Footer />
       {/* <TestFirebase /> */}
     </main>
     </>
