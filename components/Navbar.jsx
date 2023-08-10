@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "@/styles/Navbar.module.css";
 
 const MENU_LIST = [
-    { text: "Home", href: "/" },
+    { text: "Home", href: "/#hero" },
     { text: "About", href: "/#about" },
     { text: "Events", href: "/#events" },
     { text: "Sponsors", href: "/#sponsors" },
@@ -13,11 +13,26 @@ const MENU_LIST = [
 ];
 
 const NavItem = ({ text, href, active }) => {
+  const handleClick = (e) => {
+    if (href.startsWith("/#")) { // Check if the link is an internal anchor
+      e.preventDefault();
+      const targetElement = document.querySelector(href.substring(1));
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
-    <Link href={href} legacyBehavior>
-      <a className={`${styles.navLink} ${active ? styles.active : ""}`}>{text}</a>
-    </Link>
+    <a href={href} onClick={handleClick} className={`${styles.navLink} ${active ? styles.active : ""}`}>
+      {text}
+    </a>
   );
+  // return (
+  //   <Link href={href} legacyBehavior>
+  //     <a className={`${styles.navLink} ${active ? styles.active : ""}`}>{text}</a>
+  //   </Link>
+  // );
 };
 
 const Navbar = () => {
