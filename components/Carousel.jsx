@@ -1,35 +1,36 @@
 import React from "react";
+import Image from "next/image";
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Dot } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import styles from '@/styles/BasicCarousel.module.css'
 
 const CarouselItem = ({ image, altText, title, subTitle }) => (
-    <div className="flex flex-shrink-0 relative w-full sm:w-auto">
-        <img src={image} alt={altText} className="object-cover object-center w-full" />
-        <div className="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
-            <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">{title}</h2>
-            <div className="flex h-full items-end pb-6">
-                <h3 className="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white">{subTitle}</h3>
+    <div className="flex flex-shrink-0 relative w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px]">
+        <img src={image} alt={altText} className="object-cover object-center w-full h-full" />
+        <div className="absolute top-0 left-0 w-full h-full p-4 sm:p-6 md:p-8">
+            <h2 className="text-sm sm:text-base md:text-lg lg:text-xl leading-4 md:leading-5 text-white">{title}</h2>
+            <div className="flex h-full items-end pb-4 sm:pb-6 md:pb-8">
+                <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white">{subTitle}</h3>
             </div>
         </div>
     </div>
 );
 
+
 export default function Carousel() {
     const slides = [
-        { image: "https://i.ibb.co/fDngH9G/carosel-1.png", altText: "black chair and white table", title: "Catalog 1", subTitle: "Minimal Interior" },
-        { image: "https://i.ibb.co/DWrGxX6/carosel-2.png", altText: "sitting area", title: "Catalog 2", subTitle: "Minimal Interior" },
-        { image: "https://i.ibb.co/DWrGxX6/carosel-2.png", altText: "sitting area", title: "Catalog 2", subTitle: "Minimal Interior" },
-        { image: "https://i.ibb.co/DWrGxX6/carosel-2.png", altText: "sitting area", title: "Catalog 2", subTitle: "Minimal Interior" },
-        { image: "https://i.ibb.co/DWrGxX6/carosel-2.png", altText: "sitting area", title: "Catalog 2", subTitle: "Minimal Interior" },
-        { image: "https://i.ibb.co/DWrGxX6/carosel-2.png", altText: "sitting area", title: "Catalog 2", subTitle: "Minimal Interior" },
-        { image: "https://i.ibb.co/DWrGxX6/carosel-2.png", altText: "sitting area", title: "Catalog 2", subTitle: "Minimal Interior" },
-        { image: "https://i.ibb.co/DWrGxX6/carosel-2.png", altText: "sitting area", title: "Catalog 2", subTitle: "Minimal Interior" },
-        { image: "https://i.ibb.co/DWrGxX6/carosel-2.png", altText: "sitting area", title: "Catalog 2", subTitle: "Minimal Interior" },
-        { image: "https://i.ibb.co/fDngH9G/carosel-1.png", altText: "black chair and white table", title: "Catalog 1", subTitle: "Minimal Interior" },
+        { image: "/logo-shield.png", altText: "sponsor1", title: "Sponsor 1", subTitle: "Sponsor 1" },
+        { image: "", altText: "sponsor2", title: "Sponsor 2", subTitle: "Sponsor 2" },
+        { image: "/logo-shield.png", altText: "sponsor3", title: "Sponsor 3", subTitle: "Sponsor 3" },
+        { image: "", altText: "sponsor4", title: "Sponsor 4", subTitle: "Sponsor 4" },
+        { image: "/logo-shield.png", altText: "sponsor5", title: "Sponsor 5", subTitle: "Sponsor 5" },
+        { image: "", altText: "sponsor6", title: "Sponsor 6", subTitle: "Sponsor 6" },
+        { image: "/logo-shield.png", altText: "sponsor7", title: "Sponsor 7", subTitle: "Sponsor 7" },
+        { image: "", altText: "sponsor8", title: "Sponsor 8", subTitle: "Sponsor 8" },
+        { image: "/logo-shield.png", altText: "sponsor9", title: "Sponsor 9", subTitle: "Sponsor 9" },
     ];
 
-    const visibleSlides = 4;
+    const visibleSlides = 3;
     // Calculate the total pages based on the number of visible slides
     const totalPages = Math.ceil(slides.length / visibleSlides);
 
@@ -41,7 +42,7 @@ export default function Carousel() {
                     naturalSlideWidth={100} 
                     isIntrinsicHeight={true} 
                     totalSlides={slides.length} 
-                    visibleSlides={4} 
+                    visibleSlides={3} 
                     step={1} 
                     infinite={true}
                     // md={{ visibleSlides: 4 }}
@@ -69,7 +70,7 @@ export default function Carousel() {
                     <div className="mt-4 flex">
                         {Array.from({ length: totalPages }).map((_, index) => (
                             <Dot slide={index * visibleSlides} key={index} className={styles['reset-element']}>
-                                <span className="block w-4 h-4 bg-gray-400 rounded-full"></span>
+                                <span className="block w-4 h-4 rounded-full"></span>
                             </Dot>
                         ))}
                     </div>
