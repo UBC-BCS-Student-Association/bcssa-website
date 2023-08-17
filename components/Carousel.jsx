@@ -22,7 +22,7 @@ const CarouselItem = ({ image, altText, title, subTitle, link }) => (
 
 export default function Carousel() {
     const slides = [
-        { image: "/logo-shield.png", altText: "sponsor1", title: "Sponsor 1", subTitle: "Sponsor 1", link: "/pastEvents" },
+        { image: "/logo-shield.png", altText: "sponsor1", title: "Sponsor 1", subTitle: "Sponsor 1", link: "/sponsors/test-sponsor" },
         { image: "", altText: "sponsor2", title: "Sponsor 2", subTitle: "Sponsor 2", link: "/pastEvents" },
         { image: "/logo-shield.png", altText: "sponsor3", title: "Sponsor 3", subTitle: "Sponsor 3", link: "/pastEvents" },
         { image: "", altText: "sponsor4", title: "Sponsor 4", subTitle: "Sponsor 4", link: "/pastEvents" },
