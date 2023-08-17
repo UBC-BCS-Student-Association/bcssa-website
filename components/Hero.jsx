@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
@@ -11,6 +12,19 @@ export default function Hero() {
           Land Acknowledgement: We would like to begin by acknowledging that the land on which we gather is the traditional, ancestral, and unceded territory of the xwməθkwəy̓əm (Musqueam) People
         </em>
       </p>
+      <Image
+        src="/bcsteam.JPG"
+        alt="bcs team"
+        width={600}
+        height={400}
+      />
+      <p id='disclaimer' className="w-full md:max-w-3xl mx-auto px-4 text-center">
+        The Bachelor of Computer Science Students Association (BCSSA) is a student club 
+        for students completing their second degree in the Bachelor of Computer Science (BCS) 
+        Program at UBC. We are not providing information on the BCS program; 
+        we are showcasing the BCS Student Association and how we enhance student life!
+      </p>
     </div>
+
   )
 }
