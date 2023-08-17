@@ -1,6 +1,7 @@
 import { firestore } from "@/firebase/firebase";
 import { query, where, collection, getDocs } from 'firebase/firestore';
 import Link from 'next/link';
+import Image from "next/image";
 
 const SponsorPage = ({ sponsor, events }) => {
   return (
@@ -8,6 +9,7 @@ const SponsorPage = ({ sponsor, events }) => {
       {/* sponsor info */}
       <div className="mb-6 border-b pb-4">
         <h1 className="text-2xl font-bold mb-2">{sponsor.sponsorName}</h1>
+        {/* <Image src={sponsor.sponsorLogo} alt={sponsor.sponsorName} width={50} height={50} className="w-48 h-auto mb-4" /> */}
         <img src={sponsor.sponsorLogo} alt={sponsor.sponsorName} className="w-48 h-auto mb-4" />
         <p>{sponsor.sponsorDescription}</p>
       </div>
@@ -20,9 +22,9 @@ const SponsorPage = ({ sponsor, events }) => {
             <h3 className="text-lg font-medium">{event.eventName}</h3>
             <p className="text-sm text-gray-600">{new Date(event.eventDate).toLocaleDateString()}</p>
             <p>{event.eventDescription}</p>
-            {event.eventImage && (
+            {event.eventImages && (
               <div className="mt-2">
-                <img src={event.eventImage} alt={event.eventName} className="w-full max-w-md h-auto" />
+                <img src={event.eventImages} alt={event.eventName} className="w-full max-w-md h-auto" />
               </div>
             )}
           </li>
