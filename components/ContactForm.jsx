@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import styles from '@/styles/ContactForm.module.css';
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
+import { Separator } from "@/components/ui/separator"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 export default function ContactForm() {
   const initialState = {
@@ -31,14 +34,15 @@ export default function ContactForm() {
       });
       const statusText = await res.text();
       if (res.ok) {
-        toast({ description: "Your message has been sent." });
-        setFormState(initialState); // Reset the form state
+        toast({ description: <><FontAwesomeIcon icon={faCheck} color="green" /> Your message has been sent.</> });
+        // toast({ description: "Your message has been sent." });
+        setFormState(initialState);
       } else {
         toast({ description: statusText });
       }
     } catch (error) {
       console.error(error);
-      toast({ description: 'Failed to send message.' });
+      toast({ variant: "destructive", description: 'Failed to send message.' });
     }
   };
 
@@ -88,7 +92,8 @@ export default function ContactForm() {
             required
           />
         </div>
-        <Button variant="outline" type="submit">
+        <Separator />
+        <Button className={styles.button} variant="outline" type="submit">
           Send Message
         </Button>
       </form>

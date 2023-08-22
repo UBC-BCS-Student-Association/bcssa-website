@@ -3,6 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "@/styles/Navbar.module.css";
 import NavItem from "./NavItem";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const MENU_LIST = [
     { text: "Home", href: "/#hero" },
@@ -21,15 +23,13 @@ const Navbar = () => {
     <header className={styles.container}>
       <nav className={styles.nav}>
         <Link href={"/"}>
-          <Image src="/logo-simple.png" alt="Logo" width="250" height="64" />
+          <Image src="/logo-simple-cropped.png" alt="Logo" width="150" height="32" />
         </Link>
         <div
           onClick={() => setNavActive(!navActive)}
           className={styles.menuBar}
         >
-          <div className={styles.menuBarDiv}></div>
-          <div className={styles.menuBarDiv}></div>
-          <div className={styles.menuBarDiv}></div>
+          <FontAwesomeIcon icon={faBars} />
         </div>
         <div className={`${navActive ? styles.active : ""} ${styles.menuList}`}>
           {MENU_LIST.map((menu, idx) => (
