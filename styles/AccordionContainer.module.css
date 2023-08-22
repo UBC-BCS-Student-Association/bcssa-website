@@ -1,5 +1,6 @@
 .accordionContainer {
     width: 500px;
+    max-width: 100%;
 }
   
 .accordionItem,
@@ -7,4 +8,17 @@
 .accordionContent {
     width: 100%;
 }
-  
+
+@media (max-width: 480px) {
+    .accordionContainer {
+        width: 100%;
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .accordionContainer {
+        width: 100%;
+        min-width: 400px
+    }
+}

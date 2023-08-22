@@ -1,9 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
+import styles from '@/styles/Section.module.css'
 
 export default function Hero() {
   return (
-    <div id="hero" className="flex flex-col items-center justify-center min-h-screen">
+    <div id="hero" className={styles.container}>
       <h1 className="text-5xl font-extrabold text-shadow bg-gradient-to-r from-blue-500 to-purple-500 text-white text-center py-8 w-full md:max-w-3xl mx-auto break-words">
         UBC BCS Student Association
       </h1>
