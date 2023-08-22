@@ -1,18 +1,18 @@
 .tabs {
-    /* padding: auto; */
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .tabsList {
     display: flex;
-    justify-content: space-between; /* Distribute tabs equally */
-    width: 100%; /* Use full width */
-    max-width: 600px; /* Set maximum width */
+    justify-content: space-between;
+    width: 100%;
     padding: 4px;
 }
 
 .tabsTrigger {
-    flex: 1; /* Allow tabs to grow and shrink as needed */
-    text-align: center; /* Center text in tabs */
+    flex: 1; /* tabs grow and shrink as needed */
+    text-align: center;
 }
 
 .tabsTrigger[data-state='active'] {
@@ -22,22 +22,15 @@
 
 .tabsContent {
     color: black;
-    width: 100%; /* Use full width */
-    max-width: 600px; /* Set maximum width */
+    width: 100%;
+    max-width: 600px;
 }
 
 
-/* Media Query for smaller screens */
 @media (max-width: 768px) {
-    .tabsTrigger {
-        flex: 1 1 50%; /* On smaller screens, show a max of 2 tabs in a row */
-    }
+    
 }
 
-/* Media Query for very small screens or mobile */
 @media (max-width: 480px) {
-    .tabsTrigger {
-        flex: 1 1 100%; /* On very small screens, stack tabs vertically */
-        text-align: center; /* Optional: center text in tabs */
-    }
+    
 }

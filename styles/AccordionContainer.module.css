@@ -1,5 +1,5 @@
 .accordionContainer {
-    width: 500px;
+    width: 600px;
     max-width: 100%;
 }
   
@@ -7,6 +7,19 @@
 .accordionTrigger,
 .accordionContent {
     width: 100%;
+    text-align: left;
+}
+
+.clickableLink {
+    color: #007bff; /* Typical link blue color */
+    text-decoration: none; /* Removes default underline */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.clickableLink:hover {
+    color: #0056b3; /* Darker shade of blue for hover */
+    text-decoration: underline; /* Underline on hover */
+    cursor: pointer; /* Hand cursor on hover */
 }
 
 @media (max-width: 480px) {
@@ -16,7 +29,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
     .accordionContainer {
         width: 100%;
         min-width: 400px
