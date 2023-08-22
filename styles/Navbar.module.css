@@ -1,4 +1,3 @@
-/* Navbar.module.css */
 .container {
   position: sticky;
   z-index: 30;
@@ -6,35 +5,31 @@
 }
 .nav {
   display: flex;
-  padding: 10px;
+  padding: 30px;
+  padding-top: 20px;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
 }
 .menuBar {
+  font-size: 30px;
   display: flex;
-  flex-direction: column;
-  row-gap: 6px;
   cursor: pointer;
-}
-.menuBarDiv {
-  width: 40px;
-  height: 4px;
-  background-color: black;
-  border-radius: 2px;
+  z-index: 31;
 }
 .menuList {
   display: flex;
   flex-direction: column;
   position: fixed;
   top: 60px;
-  width: 288px;
+  width: 50%;
   row-gap: 24px;
-  right: -288px;
+  right: -50%;
   padding: 24px 16px;
   transition: all 0.2s;
   min-height: calc(100vh - 60px);
   background-color: #fff;
+  border: none;
 }
 .menuList.active {
   right: 0;
@@ -67,6 +62,8 @@
     column-gap: 24px;
     align-items: center;
     right: 0; /* reset right property */
+    border-width: 1px;
+    border-top: none;
   }
   .navLink::before {
     content: '';

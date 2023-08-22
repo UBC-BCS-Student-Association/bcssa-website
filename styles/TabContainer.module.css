@@ -1,0 +1,36 @@
+.tabs {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.tabsList {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 4px;
+}
+
+.tabsTrigger {
+    flex: 1; /* tabs grow and shrink as needed */
+    text-align: center;
+}
+
+.tabsTrigger[data-state='active'] {
+    background-color: white;
+    color: #252525;
+}
+
+.tabsContent {
+    color: black;
+    width: 100%;
+    max-width: 600px;
+}
+
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 480px) {
+    
+}
