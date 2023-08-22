@@ -1,17 +1,22 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import styles from '@/styles/ContactForm.module.css';
+import { Button } from "@/components/ui/button";
+import { useToast } from "@/components/ui/use-toast";
 
 export default function ContactForm() {
-  const [formState, setFormState] = useState({
+  const initialState = {
     name: '',
     email: '',
     subject: '',
     message: ''
-  });
-  const [status, setStatus] = useState('');
+  };
+
+  const [formState, setFormState] = useState(initialState);
+  const { toast } = useToast();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormState({ ...formState, [name]: value });
+    setFormState(prevState => ({ ...prevState, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
@@ -24,32 +29,69 @@ export default function ContactForm() {
           'Content-Type': 'application/json'
         }
       });
-      setStatus(await res.text());
+      const statusText = await res.text();
+      if (res.ok) {
+        toast({ description: "Your message has been sent." });
+        setFormState(initialState); // Reset the form state
+      } else {
+        toast({ description: statusText });
+      }
     } catch (error) {
       console.error(error);
-      setStatus('Failed to send message.');
+      toast({ description: 'Failed to send message.' });
     }
   };
 
   return (
-    <div style={{ maxWidth: '500px', margin: '0 auto', padding: '15px', border: '1px solid #ccc', borderRadius: '8px' }}>
-      <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: '15px' }}>
-          <input type="text" name="name" placeholder="Name" onChange={handleChange} required style={{ display: 'block', width: '100%' }} />
+    <div className={styles.container}>
+      <form className={styles.formContainer} onSubmit={handleSubmit}>
+        <div>
+          <input
+            className={styles.inputField}
+            type="text"
+            name="name"
+            placeholder="Name"
+            onChange={handleChange}
+            value={formState.name}
+            required
+          />
         </div>
-        <div style={{ marginBottom: '15px' }}>
-          <input type="email" name="email" placeholder="Email" onChange={handleChange} required style={{ display: 'block', width: '100%' }} />
+        <div>
+          <input
+            className={styles.inputField}
+            type="email"
+            name="email"
+            placeholder="Email"
+            onChange={handleChange}
+            value={formState.email}
+            required
+          />
         </div>
-        <div style={{ marginBottom: '15px' }}>
-          <input type="text" name="subject" placeholder="Subject" onChange={handleChange} required style={{ display: 'block', width: '100%' }} />
+        <div>
+          <input
+            className={styles.inputField}
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            onChange={handleChange}
+            value={formState.subject}
+            required
+          />
         </div>
-        <div style={{ marginBottom: '15px' }}>
-          <textarea name="message" placeholder="Message" onChange={handleChange} required style={{ display: 'block', width: '100%' }} />
+        <div>
+          <textarea
+            className={styles.textAreaField}
+            name="message"
+            placeholder="Message"
+            onChange={handleChange}
+            value={formState.message}
+            required
+          />
         </div>
-        <button type="submit">Send Message</button>
-        <p>{status}</p>
+        <Button variant="outline" type="submit">
+          Send Message
+        </Button>
       </form>
     </div>
   );
-  
 }
