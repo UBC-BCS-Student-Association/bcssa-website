@@ -19,6 +19,17 @@ const Navbar = () => {
   const [navActive, setNavActive] = useState(null);
   const [activeIdx, setActiveIdx] = useState(-1);
 
+  const handleClick = (idx, href) => {
+    setActiveIdx(idx);
+    setNavActive(false);
+    if (href === "/#hero") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <header className={styles.container}>
       <nav className={styles.nav}>
@@ -34,10 +45,7 @@ const Navbar = () => {
         <div className={`${navActive ? styles.active : ""} ${styles.menuList}`}>
           {MENU_LIST.map((menu, idx) => (
             <div
-              onClick={() => {
-                setActiveIdx(idx);
-                setNavActive(false);
-              }}
+              onClick={() => handleClick(idx, menu.href)}
               key={menu.text}
             >
               <NavItem active={activeIdx === idx} {...menu} />
