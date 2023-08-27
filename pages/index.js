@@ -6,7 +6,6 @@ import TestFirebase from '@/components/TestFirebase'
 import Hero from '@/components/Hero'
 import Contact from '@/components/Contact'
 import FAQ from '@/components/FAQ'
-import Footer from '@/components/Footer'
 import Resource from '@/components/Resource'
 
 
@@ -19,13 +18,14 @@ export default function Home() {
       className={`flex min-h-screen flex-col items-center justify-between ${inter.className}`}
     > */}
     <main className='flex flex-col items-center justify-between'>
+    {/* <main className="mainContent"> */}
       <Hero />
       <About />
       <Events />
       <Sponsors />
       <FAQ />
       <Contact />
-      <Resource />
+      {/* <Resource /> */}
       {/* <TestFirebase /> */}
     </main>
     </>

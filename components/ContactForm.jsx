@@ -79,7 +79,6 @@ export default function ContactForm() {
             placeholder="Subject"
             onChange={handleChange}
             value={formState.subject}
-            required
           />
         </div>
         <div>

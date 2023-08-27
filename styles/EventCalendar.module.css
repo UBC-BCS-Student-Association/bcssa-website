@@ -1,9 +1,9 @@
 .iframeContainer {
     position: relative;
     width: 100%;
-    padding-bottom: 100%; /* calendar ratio*/
+    padding-bottom: 90%; /* calendar ratio*/
     overflow: hidden;
-    max-width: 600px;
+    max-width: 700px;
     min-width: 320px;
 }
 
@@ -31,7 +31,7 @@
 
 @media (min-width: 769px) {
     .iframeContainer {
-        min-width: 600px;  /* Adjust to your desired minimum width */
+        min-width: 600px;
         width: 100%;
     }
 }

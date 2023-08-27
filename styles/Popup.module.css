@@ -1,0 +1,50 @@
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    /* equal spacing horizontally and vertically between grid items */
+    gap: 20px;
+    /* fixed height for all items*/
+    grid-auto-rows: 120px; 
+}
+
+.popover {
+    width: 100%;
+    height: 100%; 
+}
+
+.triggerContainer {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    /* width: 80%; */
+    height: 100%;
+    justify-content: center;
+}
+
+.roundImage {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.textContainer {
+    text-align: left;
+    flex: 1;
+}
+
+.contentImageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.popoverContent {
+    width: 75%;
+    max-width: 500px;
+    margin-left: 3%;
+}
