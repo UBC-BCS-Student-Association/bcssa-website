@@ -21,15 +21,10 @@ const CarouselItem = ({ image, altText, title, subTitle, link }) => (
 
 export default function Carousel() {
     const slides = [
-        { image: "/logo-shield.png", altText: "sponsor1", title: "Sponsor 1", subTitle: "Sponsor 1", link: "/sponsors/test-sponsor" },
-        { image: "", altText: "sponsor2", title: "Sponsor 2", subTitle: "Sponsor 2", link: "/pastEvents" },
-        { image: "/logo-shield.png", altText: "sponsor3", title: "Sponsor 3", subTitle: "Sponsor 3", link: "/sponsors/another-sponsor" },
-        { image: "", altText: "sponsor4", title: "Sponsor 4", subTitle: "Sponsor 4", link: "/pastEvents" },
-        { image: "/logo-shield.png", altText: "sponsor5", title: "Sponsor 5", subTitle: "Sponsor 5", link: "/pastEvents" },
-        { image: "", altText: "sponsor6", title: "Sponsor 6", subTitle: "Sponsor 6", link: "/pastEvents" },
-        { image: "/logo-shield.png", altText: "sponsor7", title: "Sponsor 7", subTitle: "Sponsor 7", link: "/pastEvents" },
-        { image: "", altText: "sponsor8", title: "Sponsor 8", subTitle: "Sponsor 8", link: "/pastEvents" },
-        { image: "/logo-shield.png", altText: "sponsor9", title: "Sponsor 9", subTitle: "Sponsor 9", link: "/pastEvents" },
+        { image: "/logo-shield.png", altText: "sponsor1", title: "Sponsor 1", subTitle: "Sponsor 1", link: "/sponsors/axiom-zen" },
+        { image: "", altText: "sponsor2", title: "Sponsor 2", subTitle: "Sponsor 2", link: "/#sponsors" },
+        { image: "/logo-shield.png", altText: "sponsor3", title: "Sponsor 3", subTitle: "Sponsor 3", link: "/sponsors/sap" },
+        { image: "", altText: "sponsor4", title: "Sponsor 4", subTitle: "Sponsor 4", link: "/#sponsors" },
     ];
 
     const visibleSlides = 3;

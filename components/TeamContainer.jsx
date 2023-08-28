@@ -48,16 +48,22 @@ const committeeMembers = [
     content: ""
   },
   {
+    imageSrc: "/team/DSC04409.jpg",
+    position: "",
+    name: "Sangita Dutta",
+    content: ""
+  },
+  {
     imageSrc: "/team/DSC04397.jpg",
     position: "",
     name: "Kashish Garg",
     content: ""
   },
   {
-    imageSrc: "/team/DSC04409.jpg",
+    imageSrc: "/team/DSC04402.jpg",
     position: "",
     name: "Phillip Tellier",
-    content: "Sangita Dutta"
+    content: ""
   },
   {
     imageSrc: "/team/DSC04407.jpg",

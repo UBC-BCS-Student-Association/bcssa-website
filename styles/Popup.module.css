@@ -4,7 +4,9 @@
     /* equal spacing horizontally and vertically between grid items */
     gap: 20px;
     /* fixed height for all items*/
-    grid-auto-rows: 120px; 
+    grid-auto-rows: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .popover {
