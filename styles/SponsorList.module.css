@@ -1,0 +1,53 @@
+.sponsorContainer {
+    width: 100%;
+}
+
+.sponsorSection {
+    display: flex;  /* Convert this to a flex container */
+    align-items: center;  /* Vertically center align content */
+    justify-content: flex-start;  /*Horizontally align to start*/
+    margin: 20px 0;
+}
+
+.sponsorTitle {
+    text-align: center;
+    width: 20%;
+    margin: 0;  /* Remove default margins from the heading */
+    /* margin-right: 20px;  Add some spacing to the right of the heading */
+    flex-shrink: 0;
+}
+
+.sponsorList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.sponsorIcon {
+    /* item takes up only necessary space, shares the line with other items */
+    flex: 1;
+    max-width: 20%;
+    min-width: 120px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .sponsorIcon {
+        max-width: 20%;
+        margin-bottom: 15px;
+    }
+
+    .sponsorSection {
+        /* stacks the items vertically */
+        flex-direction: column;
+    }
+
+    .sponsorTitle {
+        margin-bottom: 10px;
+        width: auto;
+        margin-right: none;
+    }
+}
