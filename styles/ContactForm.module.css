@@ -1,13 +1,14 @@
 .container {
     display: flex;
-    margin: 0 auto; /* centers container */
-    padding: 15px;
-    box-sizing: border-box; /* ensure the padding doesn't add extra width */
+    /* margin: 0 auto; centers container */
+    /* padding: 15px; */
+    /* box-sizing: border-box; ensure the padding doesn't add extra width */
     justify-content: center;
+    width: 100%;
 }
 
 .formContainer {
-    width: 90%;
+    width: 100%;
 }
 
 .inputField {
@@ -17,6 +18,7 @@
     box-sizing: border-box;
     margin-bottom: 15px;
     background-color: white;
+    border-width: 2px;
 }
 
 .textAreaField {
@@ -26,6 +28,7 @@
     padding: 8px;
     box-sizing: border-box;
     margin-bottom: 15px;
+    border-width: 2px;
 }
 
 .button {
@@ -48,7 +51,7 @@
 
 @media (min-width: 768px) {
     .container {
-        padding: 8px;
+        /* padding: 8px; */
         min-width: 700px;
     }
 }

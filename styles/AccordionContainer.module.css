@@ -1,6 +1,7 @@
 .accordionContainer {
-    width: 600px;
-    max-width: 100%;
+    /* width: 600px; */
+    width: 100%;
+    /* max-width: 100%; */
 }
   
 .accordionItem,

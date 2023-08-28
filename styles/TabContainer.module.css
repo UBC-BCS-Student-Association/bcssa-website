@@ -1,7 +1,8 @@
 .tabs {
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 80%;
+    /* margin-left: 5%; */
+    /* margin-right: 5%; */
+    /* width: 80%; */
+    /* align-items: center; */
 }
 
 .tabsList {
@@ -9,24 +10,38 @@
     justify-content: space-between;
     width: 100%;
     padding: 4px;
+    background-color: white;
 }
 
 .tabsTrigger {
     flex: 1; /* tabs grow and shrink as needed */
     text-align: center;
+    font-size: large;
 }
 
 .tabsTrigger[data-state='active'] {
     background-color: white;
     color: #252525;
+    font-size: x-large;
+    box-shadow: none;
 }
 
 
-.tabsContent {
+.tabsContentContainer {
     color: black;
-    width: 100%;
-    min-height: 500px;
+    padding: 4%;
+    /* min-height: 500px; */
     /* transition: height 0.3s ease-in-out;  */
+}
+
+.tabsContentTitle {
+    font-size: x-large;
+    font-weight: 400;
+}
+
+.tabsContentDescription {
+    /* text-indent: 5%; */
+    font-weight: 300;
 }
 
 
@@ -35,7 +50,5 @@
 }
 
 @media (max-width: 480px) {
-    .tabs {
-        width: 90%;
-    }
+
 }

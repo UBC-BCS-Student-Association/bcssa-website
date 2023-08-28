@@ -9,26 +9,31 @@ import SponsorList from './SponsorList';
 const monetarySponsors = [
   {
     icon: '/logo-shield.png',
-    name: 'Axiom Zen',
-    url: '/sponsors/axiom-zen'
+    name: 'AMS',
+    url: '/sponsors/ams'
   },
   {
     icon: '/logo-shield.png',
-    name: 'AMS',
-    url: '/sponsors/ams'
+    name: 'Axiom Zen',
+    url: '/sponsors/axiom-zen'
   },
 ];
 
 const inKindSponsors = [
   {
     icon: '/logo-shield.png',
-    name: 'SAP',
-    url: '/sponsors/sap'
+    name: 'Dapper Labs',
+    url: '/sponsors/dapper-labs'
   },
   {
     icon: '/logo-shield.png',
-    name: 'Dapper Labs',
-    url: '/sponsors/dapper-labs'
+    name: 'Microsoft',
+    url: '/sponsors/microsoft'
+  },
+  {
+    icon: '/logo-shield.png',
+    name: 'SAP',
+    url: '/sponsors/sap'
   },
 ];
 
@@ -54,8 +59,8 @@ const inKindSponsors = [
 
 export default function Sponsors() {
   return (
-    <div id="sponsors" className={styles.container}>
-        <p class="text-2xl text-center ...">Sponsors</p>
+    <div id="sponsors" className={styles.sectionContainer}>
+        <p className={styles.sectionTitle}>Sponsors</p>
         <SponsorList monetarySponsors={monetarySponsors} inKindSponsors={inKindSponsors} />
         {/* {slides && slides.length > 0 && <Carousel slides={slides} />} */}
         {/* {slides && <Carousel slides={slides} />} */}

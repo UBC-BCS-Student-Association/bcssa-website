@@ -38,7 +38,7 @@ const accordionData = [
   },
   { 
     trigger: "How can I stay updated on club activities and announcements?", 
-    content: "For large events, we announce them via UBC Email systems that are sent directly to your student emails. We also have an event calendar here (link to event calendar)." 
+    content: <>For large events, we announce them via UBC Email systems that are sent directly to your student emails. We also have an event calendar <a href="/#events" className={styles.clickableLink}>here</a>.</>
   },
   { 
     trigger: "Can I suggest new ideas or propose events for the club?", 
@@ -53,13 +53,15 @@ const accordionData = [
 
 export function AccordionContainer() {
   return (
-    <Accordion type="multiple" collapsible className={styles.accordionContainer}>
-      {accordionData.map((item, index) => (
-        <AccordionItem key={`item-${index}`} value={`item-${index}`} className={styles.accordionItem}>
-          <AccordionTrigger className={styles.accordionTrigger}>{item.trigger}</AccordionTrigger>
-          <AccordionContent className={styles.accordionContent}>{item.content}</AccordionContent>
-        </AccordionItem>
-      ))}
-    </Accordion>
+    <div className={styles.accordionContainer}>
+      <Accordion type="multiple" collapsible>
+        {accordionData.map((item, index) => (
+          <AccordionItem key={`item-${index}`} value={`item-${index}`} className={styles.accordionItem}>
+            <AccordionTrigger className={styles.accordionTrigger}>{item.trigger}</AccordionTrigger>
+            <AccordionContent className={styles.accordionContent}>{item.content}</AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </div>
   )
 }

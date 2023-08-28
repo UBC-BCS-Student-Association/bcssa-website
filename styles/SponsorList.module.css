@@ -6,13 +6,14 @@
     display: flex;  /* Convert this to a flex container */
     align-items: center;  /* Vertically center align content */
     justify-content: flex-start;  /*Horizontally align to start*/
-    margin: 20px 0;
+    /* margin: 20px 0; */
 }
 
 .sponsorTitle {
     text-align: center;
-    width: 20%;
-    margin: 0;  /* Remove default margins from the heading */
+    /* width: 20%; */
+    /* Remove default margins from the heading */
+    /* margin: 0; */
     /* margin-right: 20px;  Add some spacing to the right of the heading */
     flex-shrink: 0;
 }
@@ -20,7 +21,7 @@
 .sponsorList {
     display: flex;
     flex-wrap: wrap;
-    gap: 5%;
+    /* gap: 5%; */
     align-items: center;
     justify-content: center;
     flex-grow: 1;
@@ -29,8 +30,8 @@
 .sponsorIcon {
     /* item takes up only necessary space, shares the line with other items */
     flex: 1;
-    max-width: 20%;
-    min-width: 120px;
+    /* max-width: 20%; */
+    /* min-width: 120px; */
     cursor: pointer;
 }
 
