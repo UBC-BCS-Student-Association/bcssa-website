@@ -20,14 +20,15 @@
 .sponsorList {
     display: flex;
     flex-wrap: wrap;
-    gap: 5%;   /* Adjusted the gap to a fixed pixel value */
-    align-items: center;  /* Vertically center the items */
-    justify-content: center;  /* Horizontally center the items */
+    gap: 5%;
+    align-items: center;
+    justify-content: center;
     flex-grow: 1;
 }
 
 .sponsorIcon {
-    flex: 1;   /* Allows the item to take up only necessary space, and to share the line with other items */
+    /* item takes up only necessary space, shares the line with other items */
+    flex: 1;
     max-width: 20%;
     min-width: 120px;
     cursor: pointer;
@@ -35,16 +36,17 @@
 
 @media (max-width: 768px) {
     .sponsorIcon {
-        max-width: 20%;  /* Allows the icon to take up the full width on mobile */
-        margin-bottom: 15px;  /* Add some space below each item */
+        max-width: 20%;
+        margin-bottom: 15px;
     }
 
     .sponsorSection {
-        flex-direction: column;  /* Stacks the title and sponsor list vertically */
+        /* stacks the items vertically */
+        flex-direction: column;
     }
 
     .sponsorTitle {
-        margin-bottom: 10px;  /* Add some space below the heading for mobile */
+        margin-bottom: 10px;
         width: auto;
         margin-right: none;
     }

@@ -1,0 +1,37 @@
+.eventItem {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    width: 90%; 
+    margin: 5%;
+    flex-direction: row; 
+}
+
+.eventDetails {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.carouselItem {
+    
+}
+
+.carouselContainer {
+    display: block;
+    width: auto;
+    max-width: 500px;
+    height: 300px; 
+    overflow: hidden;
+}
+
+.carouselImage {
+    height: 300px; 
+    width: auto; 
+    display: block; 
+}
+
+@media (max-width: 768px) {
+    .eventItem {
+        flex-direction: column;
+    }
+}
