@@ -10,11 +10,11 @@ import styles from "@/styles/AccordionContainer.module.css";
 const accordionData = [
   { 
     trigger: "How can I join BCSSA?", 
-    content: "You are automatically a member of BCSSA and enjoy BCSSA benefits if you are enrolled in the BCS 2nd Degree Program in UBC." 
+    content: "You are automatically a member of BCSSA and enjoy BCSSA benefits if you are enrolled in the BCS 2nd Degree Program in UBC."
   },
   { 
     trigger: "When and where does the club meet?", 
-    content: "We typically meet weekly or bi-weekly, please contact us here (link to contact page) if you want to join our meetings." 
+    content: <>We typically meet weekly or bi-weekly, please contact us <a href="/#contact" className={styles.clickableLink}>here</a> if you want to join our meetings.</> 
   },
   { 
     trigger: "What types of activities/events does the club organize?", 
@@ -47,21 +47,47 @@ const accordionData = [
   { 
     trigger: "How can I contact the club for further inquiries?", 
     content: <>Please reach out to us <a href="/#contact" className={styles.clickableLink}>here</a>!</>
-  }
+  },
 ];
 
 
+// export function AccordionContainer() {
+//   return (
+//       <Accordion type="multiple" collapsible className={styles.accordionContainer}>
+//         {accordionData.map((item, index) => (
+//           <div className={styles.itemWrapper} key={`wrapper-${index}`}>
+//           <AccordionItem  className={styles.accordionItem} key={`item-${index}`} value={`item-${index}`}>
+//             <AccordionTrigger className={styles.accordionTrigger}>{item.trigger}</AccordionTrigger>
+//             <AccordionContent className={styles.accordionContent}>{item.content}</AccordionContent>
+//           </AccordionItem>
+//           </div>
+//         ))}
+//       </Accordion>
+//   )
+// }
+
 export function AccordionContainer() {
+  const firstHalf = accordionData.slice(0, Math.ceil(accordionData.length / 2));
+  const secondHalf = accordionData.slice(Math.ceil(accordionData.length / 2));
+  
   return (
     <div className={styles.accordionContainer}>
-      <Accordion type="multiple" collapsible>
-        {accordionData.map((item, index) => (
-          <AccordionItem key={`item-${index}`} value={`item-${index}`} className={styles.accordionItem}>
-            <AccordionTrigger className={styles.accordionTrigger}>{item.trigger}</AccordionTrigger>
-            <AccordionContent className={styles.accordionContent}>{item.content}</AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
+        <Accordion type="multiple" collapsible>
+          {firstHalf.map((item, index) => (
+            <AccordionItem key={`item-${index}`} value={`item-${index}`}>
+              <AccordionTrigger className={styles.accordionTrigger}>{item.trigger}</AccordionTrigger>
+              <AccordionContent className={styles.accordionContent}>{item.content}</AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+        <Accordion type="multiple" collapsible>
+          {secondHalf.map((item, index) => (
+            <AccordionItem key={`item-${index}`} value={`item-${index}`}>
+              <AccordionTrigger className={styles.accordionTrigger}>{item.trigger}</AccordionTrigger>
+              <AccordionContent className={styles.accordionContent}>{item.content}</AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
     </div>
-  )
+  );
 }

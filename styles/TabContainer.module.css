@@ -19,6 +19,10 @@
     font-size: large;
 }
 
+.tabsTrigger:hover {
+    font-size: x-large;
+}
+
 .tabsTrigger[data-state='active'] {
     background-color: white;
     color: #252525;
