@@ -6,14 +6,14 @@ import heroStyles from '@/styles/Hero.module.css'
 
 export default function HeroArden() {
   return (
-    <div id="hero" className={sectionStyles.sectionContainer}>
+    <div id="hero" className={heroStyles.heroContainer}>
         <div className={sectionStyles.sectionContent}>
             <Image src="/logo-layered_cropped.png" alt="Logo" width="600" height="300" />
             <p className={heroStyles.heroText}>
                 UBC Bachelor of Computer Science Student Association
             </p>
         </div>
-        <Separator />
+        <Separator className={heroStyles.heroSeparator} />
         {/* <p className={heroStyles.heroDisclaimer}>
             The Bachelor of Computer Science Students Association (BCSSA) is a student club 
             for students completing their second degree in the Bachelor of Computer Science (BCS) 

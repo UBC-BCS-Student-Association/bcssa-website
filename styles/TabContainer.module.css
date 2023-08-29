@@ -54,5 +54,16 @@
 }
 
 @media (max-width: 480px) {
-
+    .tabsTrigger {
+        font-size: medium;
+    }
+    .tabsTrigger:hover {
+        font-size: large;
+    }
+    .tabsTrigger[data-state='active'] {
+        background-color: white;
+        color: #252525;
+        font-size: large;
+        box-shadow: none;
+    }
 }

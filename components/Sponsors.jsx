@@ -5,6 +5,7 @@ import { firestore } from "@/firebase/firebase";
 import { getDocs, collection } from "firebase/firestore";
 import styles from '@/styles/Section.module.css'
 import SponsorList from './SponsorList';
+import { Separator } from './ui/separator';
 
 const monetarySponsors = [
   {
@@ -61,6 +62,7 @@ export default function Sponsors() {
   return (
     <div id="sponsors" className={styles.sectionContainer}>
         <p className={styles.sectionTitle}>Sponsors</p>
+        <Separator className={styles.sectionSeparator} />
         <div className={styles.sectionContent}>
           <SponsorList monetarySponsors={monetarySponsors} inKindSponsors={inKindSponsors} />
         {/* {slides && slides.length > 0 && <Carousel slides={slides} />} */}
