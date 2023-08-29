@@ -5,6 +5,7 @@
     /* box-sizing: border-box; ensure the padding doesn't add extra width */
     justify-content: center;
     width: 100%;
+    margin: 0 auto;
 }
 
 .formContainer {
@@ -52,6 +53,7 @@
 @media (min-width: 768px) {
     .container {
         /* padding: 8px; */
-        min-width: 700px;
+        /* min-width: 700px; */
+        width: 60%;
     }
 }
