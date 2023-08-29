@@ -1,0 +1,59 @@
+.heroContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* 100% of the viewport height */
+    min-height: 70vh;
+    /* margin: auto; */
+    width: 90%;
+    margin-bottom: 25%;
+}
+
+.heroText {
+    font-family: 'Courier Prime', monospace;
+    font-size: xx-large;
+    padding-left: 2%;
+}
+
+.heroText::after {
+    content: "";
+    display: inline-block;
+    margin-left: 1px;
+    width: 10px;
+    height: 20px;
+    background-color: #2e2e2e;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.heroDisclaimer {
+    font-family: 'Courier Prime', monospace;
+    font-size: smaller;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.heroSeparator {
+    background-color: #2e2e2e;
+}
+  
+@media (max-width: 480px) {
+    .heroText {
+        font-size: medium;
+    }
+    .heroText::after {
+        width: 7px;
+        height: 15.5px;
+    }
+}

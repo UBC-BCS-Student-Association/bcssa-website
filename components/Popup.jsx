@@ -15,9 +15,15 @@ export default function Popup({ membersList }) {
         <Popover className={styles.popover} key={member.name}>
           <PopoverTrigger>
             <div className={styles.triggerContainer}>
-              <div className={styles.roundImage}>
+              {/* <div className={styles.roundImage}>
                 <Image src={member.imageSrc} alt={member.name} layout="fill" objectFit="cover" />
+              </div> */}
+              <div className={styles.diamondWrapper}>
+                <div className={styles.roundImage}>
+                    <Image src={member.imageSrc} alt={member.name} layout="fill" objectFit="cover" />
+                </div>
               </div>
+
               <div className={styles.textContainer}>
                 {member.position}
                 <br />

@@ -5,30 +5,36 @@ import { firestore } from "@/firebase/firebase";
 import { getDocs, collection } from "firebase/firestore";
 import styles from '@/styles/Section.module.css'
 import SponsorList from './SponsorList';
+import { Separator } from './ui/separator';
 
 const monetarySponsors = [
   {
-    icon: '/logo-shield.png',
-    name: 'Axiom Zen',
-    url: '/sponsors/axiom-zen'
-  },
-  {
-    icon: '/logo-shield.png',
+    logo: '/sponsors/ams.png',
     name: 'AMS',
     url: '/sponsors/ams'
+  },
+  {
+    logo: '/sponsors/axiom-zen.jpg',
+    name: 'Axiom Zen',
+    url: '/sponsors/axiom-zen'
   },
 ];
 
 const inKindSponsors = [
   {
-    icon: '/logo-shield.png',
-    name: 'SAP',
-    url: '/sponsors/sap'
-  },
-  {
-    icon: '/logo-shield.png',
+    logo: '/sponsors/dapper-labs.png',
     name: 'Dapper Labs',
     url: '/sponsors/dapper-labs'
+  },
+  // {
+  //   logo: '/logo-shield.png',
+  //   name: 'Microsoft',
+  //   url: '/sponsors/microsoft'
+  // },
+  {
+    logo: '/sponsors/sap.jpg',
+    name: 'SAP',
+    url: '/sponsors/sap'
   },
 ];
 
@@ -54,13 +60,16 @@ const inKindSponsors = [
 
 export default function Sponsors() {
   return (
-    <div id="sponsors" className={styles.container}>
-        <p class="text-2xl text-center ...">Sponsors</p>
-        <SponsorList monetarySponsors={monetarySponsors} inKindSponsors={inKindSponsors} />
+    <div id="sponsors" className={styles.sectionContainer}>
+        <p className={styles.sectionTitle}>Sponsors</p>
+        <Separator className={styles.sectionSeparator} />
+        <div className={styles.sectionContent}>
+          <SponsorList monetarySponsors={monetarySponsors} inKindSponsors={inKindSponsors} />
         {/* {slides && slides.length > 0 && <Carousel slides={slides} />} */}
         {/* {slides && <Carousel slides={slides} />} */}
         {/* <Carousel slides={[]} /> */}
         {/* <Carousel /> */}
+        </div>
     </div>
   )
 }

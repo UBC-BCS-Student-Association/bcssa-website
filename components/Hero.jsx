@@ -4,7 +4,7 @@ import styles from '@/styles/Section.module.css'
 
 export default function Hero() {
   return (
-    <div id="hero" className={styles.container}>
+    <div id="hero" className={styles.sectionContainer}>
       <h1 className="text-5xl font-extrabold text-shadow bg-gradient-to-r from-blue-500 to-purple-500 text-white text-center py-8 w-full md:max-w-3xl mx-auto break-words">
         UBC BCS Student Association
       </h1>
@@ -13,12 +13,12 @@ export default function Hero() {
           Land Acknowledgement: We would like to begin by acknowledging that the land on which we gather is the traditional, ancestral, and unceded territory of the xwməθkwəy̓əm (Musqueam) People
         </em>
       </p>
-      <Image
+      {/* <Image
         src="/bcsteam.JPG"
         alt="bcs team"
         width={600}
         height={400}
-      />
+      /> */}
       <p id='disclaimer' className="w-full md:max-w-3xl mx-auto px-4 text-center">
         The Bachelor of Computer Science Students Association (BCSSA) is a student club 
         for students completing their second degree in the Bachelor of Computer Science (BCS) 

@@ -1,9 +1,40 @@
-.container {
+.sectionContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 80vh; /* 100% of the viewport height */
-    margin: 5%;
-    width: 85%;
+    /* 100% of the viewport height */
+    min-height: 70vh;
+    /* margin: auto; */
+    width: 90%;
+    margin-bottom: 20%;
+}
+
+.sectionTitle {
+    /* font-family: 'Courier Prime', monospace; */
+    font-size: 200%;
+    font-weight: 500;
+}
+
+.sectionDescrioption {
+    font-size: 110%;
+    font-weight: 300;
+    text-align: center;
+}
+
+.sectionContent {
+    width: 100%;
+    margin-top: 5%;
+}
+
+.sectionButton {
+    margin-top: 4%;
+    font-size: large;
+    font-weight: 400;
+}
+
+.sectionSeparator {
+    margin-top: 3%;
+    height: 6px;  /* Thickness of the separator */
+    background: linear-gradient(to right, #547c9d 0%, #547c9d 60%, #0c2444 60%, #0c2444 60%, #f0b15d 60%, #f0b15d 75%, #f4442c 75%, #f4442c 100%);
 }
