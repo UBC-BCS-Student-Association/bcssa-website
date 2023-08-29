@@ -6,7 +6,9 @@ export default function FAQ() {
   return (
     <div id="faq" className={styles.sectionContainer}>
         <p className={styles.sectionTitle}>FAQ</p>
-        <AccordionContainer />
+        <div className={styles.sectionContent}>
+          <AccordionContainer />
+        </div>
     </div>
   )
 }

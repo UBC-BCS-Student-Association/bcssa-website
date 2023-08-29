@@ -8,12 +8,14 @@ export default function Events() {
   return (
     <div id="events" className={styles.sectionContainer}>
         <p className={styles.sectionTitle}>Events</p>
-        <EventCalendar />
-        <Link href="/pastEvents">
-          <Button className={styles.sectionButton} variant="outline">
-            Past Events
-          </Button>
-        </Link>
+        <div className={styles.sectionContent}>
+          <EventCalendar />
+          <Link href="/pastEvents">
+            <Button className={styles.sectionButton} variant="outline">
+              Past Events
+            </Button>
+          </Link>
+        </div>
     </div>
   )
 }

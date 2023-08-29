@@ -61,11 +61,13 @@ export default function Sponsors() {
   return (
     <div id="sponsors" className={styles.sectionContainer}>
         <p className={styles.sectionTitle}>Sponsors</p>
-        <SponsorList monetarySponsors={monetarySponsors} inKindSponsors={inKindSponsors} />
+        <div className={styles.sectionContent}>
+          <SponsorList monetarySponsors={monetarySponsors} inKindSponsors={inKindSponsors} />
         {/* {slides && slides.length > 0 && <Carousel slides={slides} />} */}
         {/* {slides && <Carousel slides={slides} />} */}
         {/* <Carousel slides={[]} /> */}
         {/* <Carousel /> */}
+        </div>
     </div>
   )
 }

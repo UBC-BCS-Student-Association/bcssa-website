@@ -7,7 +7,9 @@ export default function About() {
     // <div id="about" className="flex flex-col items-center justify-center min-h-screen">
     <div id="about" className={styles.sectionContainer}>
         <p className={styles.sectionTitle}>About</p>
-        <TabContainer />
+        <div className={styles.sectionContent}>
+          <TabContainer />
+        </div>
     </div>
   )
 }

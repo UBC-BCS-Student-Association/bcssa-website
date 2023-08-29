@@ -6,7 +6,12 @@ export default function Contact() {
   return (
     <div id="contact" className={styles.sectionContainer}>
       <p className={styles.sectionTitle}>Contact</p>
-      <ContactForm />
+      <p className={styles.sectionDescrioption}>
+        Interested in sponsorship or want to get in touch?
+      </p>
+      <div className={styles.sectionContent}>
+        <ContactForm />
+      </div>
     </div>
   )
 }

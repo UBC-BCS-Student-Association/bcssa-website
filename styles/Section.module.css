@@ -4,20 +4,29 @@
     align-items: center;
     justify-content: center;
     /* 100% of the viewport height */
-    min-height: 80vh;
+    min-height: 70vh;
     /* margin: auto; */
     width: 90%;
     margin-bottom: 10%;
 }
 
 .sectionTitle {
-    font-size: 250%;
+    font-size: 200%;
     font-weight: 500;
-    margin-bottom: 10%;
+}
+
+.sectionDescrioption {
+    font-size: 110%;
+    font-weight: 300;
+}
+
+.sectionContent {
+    width: 100%;
+    margin-top: 5%;
 }
 
 .sectionButton {
-    margin-top: 20%;
-    font-size: x-large;
+    margin-top: 4%;
+    font-size: large;
     font-weight: 400;
 }

@@ -7,6 +7,7 @@ import Hero from '@/components/Hero'
 import Contact from '@/components/Contact'
 import FAQ from '@/components/FAQ'
 import Resource from '@/components/Resource'
+import HeroArden from '@/components/HeroArden'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -20,7 +21,8 @@ export default function Home() {
     <main className='flex flex-col items-center justify-between'>
     {/* <main className="mainContent"> */}
     {/* <main> */}
-      <Hero />
+      {/* <Hero /> */}
+      <HeroArden />
       <About />
       <Events />
       <Sponsors />
