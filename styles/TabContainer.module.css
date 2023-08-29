@@ -43,8 +43,32 @@
     font-weight: 400;
 }
 
+.yellowBrace {
+    color: #f0b15d;
+    font-size: x-large;
+    font-weight: 400;
+}  
+
+.yellowBraceEnd {
+    color: #f0b15d;
+    font-size: x-large;
+    font-weight: 400;
+    position: absolute;
+    right: 7%;
+}  
+
+/* .tabsContentTitle::after {
+    content: "{";
+    position: absolute;
+    margin-left: 8px;
+    top: 0;
+    color: red;
+    font-size: x-large;
+} */
+
 .tabsContentDescription {
     /* text-indent: 5%; */
+    margin-left: 3%;
     font-weight: 300;
 }
 

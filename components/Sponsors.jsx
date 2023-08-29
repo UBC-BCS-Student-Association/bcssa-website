@@ -9,12 +9,12 @@ import { Separator } from './ui/separator';
 
 const monetarySponsors = [
   {
-    icon: '/logo-shield.png',
+    logo: '/sponsors/ams.png',
     name: 'AMS',
     url: '/sponsors/ams'
   },
   {
-    icon: '/logo-shield.png',
+    logo: '/sponsors/axiom-zen.jpg',
     name: 'Axiom Zen',
     url: '/sponsors/axiom-zen'
   },
@@ -22,17 +22,17 @@ const monetarySponsors = [
 
 const inKindSponsors = [
   {
-    icon: '/logo-shield.png',
+    logo: '/sponsors/dapper-labs.png',
     name: 'Dapper Labs',
     url: '/sponsors/dapper-labs'
   },
+  // {
+  //   logo: '/logo-shield.png',
+  //   name: 'Microsoft',
+  //   url: '/sponsors/microsoft'
+  // },
   {
-    icon: '/logo-shield.png',
-    name: 'Microsoft',
-    url: '/sponsors/microsoft'
-  },
-  {
-    icon: '/logo-shield.png',
+    logo: '/sponsors/sap.jpg',
     name: 'SAP',
     url: '/sponsors/sap'
   },

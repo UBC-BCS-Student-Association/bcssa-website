@@ -50,8 +50,10 @@ export default function TabContainer() {
       {tabDetails.map((tab, index) => (
         <TabsContent key={index} className={styles.tabsContentContainer} value={tab.value}>
           <p className={styles.tabsContentTitle}>{tab.contentTitle}</p>
+          <span className={styles.yellowBrace}>{" {"}</span>
           <p className={styles.tabsContentDescription}>{tab.description}</p>
           {tab.extraComponent}
+          <span className={styles.yellowBrace}>{"}"}</span>
         </TabsContent>
       ))}
     </Tabs>
