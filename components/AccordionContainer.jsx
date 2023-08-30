@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link';
 import {
   Accordion,
   AccordionContent,
@@ -14,7 +15,7 @@ const accordionData = [
   },
   { 
     trigger: "When and where does the club meet?", 
-    content: <>We typically meet weekly or bi-weekly, please contact us <a href="/#contact" className={styles.clickableLink}>here</a> if you want to join our meetings.</> 
+    content: <>We typically meet weekly or bi-weekly, please contact us <Link href="/#contact"><span className={styles.clickableLink}>here</span></Link> if you want to join our meetings.</>
   },
   { 
     trigger: "What types of activities/events does the club organize?", 
@@ -38,15 +39,15 @@ const accordionData = [
   },
   { 
     trigger: "How can I stay updated on club activities and announcements?", 
-    content: <>For large events, we announce them via UBC Email systems that are sent directly to your student emails. We also have an event calendar <a href="/#events" className={styles.clickableLink}>here</a>.</>
+    content: <>For large events, we announce them via UBC Email systems that are sent directly to your student emails. We also have an event calendar <Link href="/#events"><span className={styles.clickableLink}>here</span></Link>.</>
   },
   { 
     trigger: "Can I suggest new ideas or propose events for the club?", 
-    content: <>You can reach out to us with your ideas <a href="/#contact" className={styles.clickableLink}>here</a>!</>
+    content: <>You can reach out to us with your ideas <Link href="/#contact"><span className={styles.clickableLink}>here</span></Link>!</>
   },
   { 
     trigger: "How can I contact the club for further inquiries?", 
-    content: <>Please reach out to us <a href="/#contact" className={styles.clickableLink}>here</a>!</>
+    content: <>Please reach out to us <Link href="/#contact"><span className={styles.clickableLink}>here</span></Link>!</>
   },
 ];
 
