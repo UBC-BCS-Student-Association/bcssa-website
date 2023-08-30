@@ -27,13 +27,11 @@ export default function HeroArden() {
         <div className={heroStyles.socialIconsList}>
         <FontAwesomeIcon
             icon={faLinkedin}
-            // size="2x"
             onClick={() => navigateTo('https://www.linkedin.com/groups/14108803/')}
             className={heroStyles.socialIcon}
           />
           <FontAwesomeIcon
             icon={faFacebook}
-            // size="2x"
             onClick={() => navigateTo('https://www.facebook.com/groups/ubcbcsclub/')}
             className={heroStyles.socialIcon}
           />
