@@ -74,7 +74,12 @@
 }
 
 @media (max-width: 480px) {
-    .sectionImage {
-        /* max-width: 70%; */
+
+}
+
+@media (min-width: 769px) {
+    .sectionContainer {
+        min-height: 75vh;
+        margin-bottom: 10%;
     }
 }
