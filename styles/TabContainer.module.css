@@ -25,17 +25,19 @@
 
 .tabsTrigger[data-state='active'] {
     background-color: white;
-    color: #252525;
+    color: #000;
     font-size: x-large;
     box-shadow: none;
 }
 
-
-.tabsContentContainer {
-    color: black;
+.contentWrapper {
     padding: 4%;
-    /* min-height: 500px; */
-    /* transition: height 0.3s ease-in-out;  */
+    display: flex;
+    justify-content: space-between;
+}
+  
+.rightContent {
+    flex: 1;
 }
 
 .tabsContentTitle {
@@ -53,8 +55,6 @@
     color: #f0b15d;
     font-size: xx-large;
     font-weight: 400;
-    position: absolute;
-    right: 7%;
 }  
 
 /* .tabsContentTitle::after {
@@ -68,8 +68,16 @@
 
 .tabsContentDescription {
     /* text-indent: 5%; */
-    margin-left: 3%;
-    font-weight: 300;
+    margin-left: 5%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    font-weight: 400;
+}
+
+.teamTitle {
+    font-size: large;
+    font-weight: 400;
+    text-align: center;
 }
 
 
@@ -85,9 +93,17 @@
         font-size: large;
     }
     .tabsTrigger[data-state='active'] {
-        background-color: white;
-        color: #252525;
         font-size: large;
-        box-shadow: none;
+    }
+    .tabsContentDescription {
+        /* text-indent: 5%; */
+        margin-left: 2%;
+    }
+    .contentWrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .rightContent {
+        margin-top: 1rem;
     }
 }

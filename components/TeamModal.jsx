@@ -8,11 +8,12 @@ import {
   DialogTitle,
   DialogDescription
 } from "@/components/ui/dialog";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faX } from '@fortawesome/free-solid-svg-icons';
 import styles from "@/styles/TeamModal.module.css";
+import { Button } from '@/components/ui/button';
 
 export default function TeamModal({ membersList }) {
-  const [openDialog, setOpenDialog] = useState(null);
-
   return (
     <>
     <div className={styles.gridContainer}>
@@ -20,17 +21,12 @@ export default function TeamModal({ membersList }) {
         <div key={member.name}>
           <Dialog>
             <DialogTrigger>
-              <div 
-                className={styles.triggerContainer}
-                onClick={() => setOpenDialog(member.name)}
-                style={{ cursor: 'pointer' }}
-              >
+              <div className={styles.triggerContainer}>
                 <div className={styles.diamondWrapper}>
                   <div className={styles.roundImage}>
                     <Image src={member.imageSrc} alt={member.name} layout="fill" objectFit="cover" />
                   </div>
                 </div>
-
                 <div className={styles.textContainer}>
                   {member.position}
                   <br />
@@ -38,17 +34,16 @@ export default function TeamModal({ membersList }) {
                 </div>
               </div>
             </DialogTrigger>
-            {openDialog === member.name && (
               <DialogContent>
+                <div className={styles.contentImageContainer}>
+                  <Image src={member.imageSrc} alt={member.name} width="250" height="64" />
+                </div>
                 <DialogHeader>
-                  <DialogTitle>{member.name}</DialogTitle>
                   <DialogDescription>{member.position}</DialogDescription>
+                  <DialogTitle>{member.name}</DialogTitle>
                 </DialogHeader>
-                <Image src={member.imageSrc} alt={member.name} width="250" height="64" />
                 <p>{member.content}</p>
-                <button onClick={() => setOpenDialog(null)}>Close</button>
               </DialogContent>
-            )}
           </Dialog>
         </div>
       ))}
