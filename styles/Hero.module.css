@@ -47,6 +47,22 @@
 .heroSeparator {
     background-color: #2e2e2e;
 }
+
+.socialIcons {
+    padding: 2%;
+    /* display: flex; */
+}
+
+.socialIcons a {
+    float: right;
+    margin: 0 1.5%;
+    font-size: xx-large;
+    transition: color 0.2s ease; 
+}
+
+.socialIcons a:hover {
+    color: #f4442c;
+}
   
 @media (max-width: 480px) {
     .heroText {
@@ -55,5 +71,9 @@
     .heroText::after {
         width: 7px;
         height: 15.5px;
+    }
+    .socialIcons a {
+        margin-left: 3%;
+        font-size: x-large;
     }
 }
