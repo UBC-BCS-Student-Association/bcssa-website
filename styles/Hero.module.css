@@ -3,10 +3,10 @@
     flex-direction: column;
     justify-content: center;
     /* 100% of the viewport height */
-    min-height: 70vh;
+    min-height: 60vh;
     /* margin: auto; */
     width: 90%;
-    margin-bottom: 25%;
+    margin-bottom: 15%;
 }
 
 .heroText {

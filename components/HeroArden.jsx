@@ -15,7 +15,7 @@ export default function HeroArden() {
         </div>
         <Separator className={heroStyles.heroSeparator} />
         {/* <p className={heroStyles.heroDisclaimer}>
-            The Bachelor of Computer Science Students Association (BCSSA) is a student club 
+            *The Bachelor of Computer Science Students Association (BCSSA) is a student club 
             for students completing their second degree in the Bachelor of Computer Science (BCS) 
             Program at UBC. We are not providing information on the BCS program; 
             we are showcasing the BCS Student Association and how we enhance student life!
