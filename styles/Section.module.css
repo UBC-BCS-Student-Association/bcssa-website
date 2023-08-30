@@ -44,8 +44,8 @@
 }
 
 .sectionImage {
-    max-width: 70%;
-    min-width: 50%;
+    max-width: 40%;
+    min-width: 20%;
     margin-bottom: 5%;
 }
 
@@ -61,11 +61,25 @@
     font-weight: 400;
     position: absolute;
     right: 5%;
-}  
+}
 
 @media (max-width: 768px) {
     .sectionButton {
         /* position: relative; */
         margin-top: 20%;
+    }
+    .sectionImage {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+
+}
+
+@media (min-width: 769px) {
+    .sectionContainer {
+        min-height: 75vh;
+        margin-bottom: 10%;
     }
 }

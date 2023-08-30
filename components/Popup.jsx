@@ -5,7 +5,7 @@ import {
     PopoverContent,
     PopoverTrigger,
   } from "@/components/ui/popover"
-import styles from "@/styles/Popup.module.css"
+// import styles from "@/styles/Popup.module.css"
 
 export default function Popup({ membersList }) {
   const [openPopover, setOpenPopover] = useState(null);
