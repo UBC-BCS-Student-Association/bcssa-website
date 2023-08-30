@@ -13,7 +13,11 @@ function SponsorLogo({ logo, name, url }) {
 function SponsorSection({ sponsors, title }) {
   return (
     <div className={styles.sponsorSection}>
-      <h2 className={styles.sponsorTitle}>{title}</h2>
+      <h2 className={styles.sponsorTitle}>
+        <span className={styles.yellowBrace}>{"{"}</span>
+        {title}
+        <span className={styles.yellowBraceEnd}>{"}"}</span>
+      </h2>
       <div className={styles.sponsorList}>
         {sponsors.map(sponsor => (
           <SponsorLogo key={sponsor.name} {...sponsor} />

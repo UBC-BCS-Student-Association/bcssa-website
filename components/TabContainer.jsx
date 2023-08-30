@@ -51,9 +51,9 @@ export default function TabContainer() {
         <TabsContent key={index} value={tab.value}>
           <div className={styles.contentWrapper}>
             <p className={styles.tabsContentTitle}>
-              <span className={styles.yellowBrace}>{"{ "}</span>
+              <span className={styles.yellowBrace}>{"{"}</span>
               {tab.contentTitle}
-              <span className={styles.yellowBraceEnd}>{" }"}</span>
+              <span className={styles.yellowBraceEnd}>{"}"}</span>
             </p>
             <div className={styles.rightContent}>
               <p className={styles.tabsContentDescription}>{tab.description}</p>

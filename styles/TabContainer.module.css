@@ -42,19 +42,18 @@
 
 .tabsContentTitle {
     font-size: x-large;
-    font-weight: 400;
 }
 
 .yellowBrace {
     color: #f0b15d;
     font-size: xx-large;
-    font-weight: 400;
+    margin-right: 20px;
 }  
 
 .yellowBraceEnd {
     color: #f0b15d;
     font-size: xx-large;
-    font-weight: 400;
+    margin-left: 20px;
 }  
 
 /* .tabsContentTitle::after {
