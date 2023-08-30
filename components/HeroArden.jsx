@@ -1,4 +1,5 @@
 import React from 'react'
+import { useRouter } from 'next/router';
 import Image from 'next/image'
 import { Separator } from "@/components/ui/separator"
 import sectionStyles from '@/styles/Section.module.css'
@@ -8,6 +9,12 @@ import { faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 
 export default function HeroArden() {
+  const router = useRouter();
+
+  const navigateTo = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div id="hero" className={heroStyles.heroContainer}>
         <div className={sectionStyles.sectionContent}>
@@ -17,13 +24,19 @@ export default function HeroArden() {
             </p>
         </div>
         <Separator className={heroStyles.heroSeparator} />
-        <div className={heroStyles.socialIcons}>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faLinkedin} size="lg" />
-          </a>
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faFacebook} size="lg" />
-          </a>
+        <div className={heroStyles.socialIconsList}>
+        <FontAwesomeIcon
+            icon={faLinkedin}
+            // size="2x"
+            onClick={() => navigateTo('https://www.linkedin.com/groups/14108803/')}
+            className={heroStyles.socialIcon}
+          />
+          <FontAwesomeIcon
+            icon={faFacebook}
+            // size="2x"
+            onClick={() => navigateTo('https://www.facebook.com/groups/ubcbcsclub/')}
+            className={heroStyles.socialIcon}
+          />
         </div>
 
         {/* <p className={heroStyles.heroDisclaimer}>

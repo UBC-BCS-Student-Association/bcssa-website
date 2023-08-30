@@ -48,19 +48,20 @@
     background-color: #2e2e2e;
 }
 
-.socialIcons {
+.socialIconsList {
     padding: 2%;
     /* display: flex; */
 }
 
-.socialIcons a {
+.socialIcon {
     float: right;
     margin: 0 1.5%;
-    font-size: xx-large;
+    font-size: 280%;
     transition: color 0.2s ease; 
+    cursor: pointer;
 }
 
-.socialIcons a:hover {
+.socialIcon:hover {
     color: #f4442c;
 }
   
@@ -72,8 +73,8 @@
         width: 7px;
         height: 15.5px;
     }
-    .socialIcons a {
+    .socialIcon {
         margin-left: 3%;
-        font-size: x-large;
+        font-size: 210%;
     }
 }
