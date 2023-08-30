@@ -1,4 +1,4 @@
-   import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import {
     Popover,
@@ -8,11 +8,19 @@ import {
 import styles from "@/styles/Popup.module.css"
 
 export default function Popup({ membersList }) {
+  const [openPopover, setOpenPopover] = useState(null);
+
   return (
     <>
     <div className={styles.gridContainer}>
       {membersList.map(member => (
-        <Popover className={styles.popover} key={member.name}>
+        // <Popover className={styles.popover} key={member.name}>
+        <Popover 
+          className={styles.popover} 
+          key={member.name}
+          open={openPopover === member.name} 
+          onOpenChange={isOpen => setOpenPopover(isOpen ? member.name : null)}
+        >
           <PopoverTrigger>
             <div className={styles.triggerContainer}>
               {/* <div className={styles.roundImage}>
