@@ -4,10 +4,10 @@
     align-items: center;
     justify-content: center;
     /* 100% of the viewport height */
-    min-height: 70vh;
+    min-height: 75vh;
     /* margin: auto; */
     width: 90%;
-    margin-bottom: 20%;
+    margin-bottom: 30%;
 }
 
 .sectionTitle {
@@ -23,18 +23,49 @@
 }
 
 .sectionContent {
+    /* position: relative; */
     width: 100%;
     margin-top: 5%;
 }
 
 .sectionButton {
-    margin-top: 4%;
+    /* position: relative; */
+    margin-top: 10%;
     font-size: large;
     font-weight: 400;
+    width: 100%;
+    border-color: #2e2e2e;
 }
 
 .sectionSeparator {
     margin-top: 3%;
     height: 6px;  /* Thickness of the separator */
     background: linear-gradient(to right, #547c9d 0%, #547c9d 60%, #0c2444 60%, #0c2444 60%, #f0b15d 60%, #f0b15d 75%, #f4442c 75%, #f4442c 100%);
+}
+
+.sectionImage {
+    max-width: 70%;
+    min-width: 50%;
+    margin-bottom: 5%;
+}
+
+.yellowBrace {
+    color: #f0b15d;
+    font-size: xx-large;
+    font-weight: 400;
+}  
+
+.yellowBraceEnd {
+    color: #f0b15d;
+    font-size: xx-large;
+    font-weight: 400;
+    position: absolute;
+    right: 5%;
+}  
+
+@media (max-width: 768px) {
+    .sectionButton {
+        /* position: relative; */
+        margin-top: 20%;
+    }
 }

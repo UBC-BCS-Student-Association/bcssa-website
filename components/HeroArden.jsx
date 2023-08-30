@@ -3,6 +3,9 @@ import Image from 'next/image'
 import { Separator } from "@/components/ui/separator"
 import sectionStyles from '@/styles/Section.module.css'
 import heroStyles from '@/styles/Hero.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons'
+
 
 export default function HeroArden() {
   return (
@@ -14,8 +17,17 @@ export default function HeroArden() {
             </p>
         </div>
         <Separator className={heroStyles.heroSeparator} />
+        <div className={heroStyles.socialIcons}>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faLinkedin} size="lg" />
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faFacebook} size="lg" />
+          </a>
+        </div>
+
         {/* <p className={heroStyles.heroDisclaimer}>
-            The Bachelor of Computer Science Students Association (BCSSA) is a student club 
+            *The Bachelor of Computer Science Students Association (BCSSA) is a student club 
             for students completing their second degree in the Bachelor of Computer Science (BCS) 
             Program at UBC. We are not providing information on the BCS program; 
             we are showcasing the BCS Student Association and how we enhance student life!

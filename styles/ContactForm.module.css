@@ -20,6 +20,7 @@
     margin-bottom: 15px;
     background-color: white;
     border-width: 2px;
+    border-radius: 0.3rem;
 }
 
 .textAreaField {
@@ -30,10 +31,15 @@
     box-sizing: border-box;
     margin-bottom: 15px;
     border-width: 2px;
+    border-radius: 0.3rem;
 }
 
 .button {
     margin-top: 16px;
+    width: 100%;
+    font-size: large;
+    border-width: 2px;
+    border-radius: 0.3rem;
 }
 
 @media (max-width: 480px) {

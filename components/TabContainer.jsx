@@ -53,7 +53,7 @@ export default function TabContainer() {
           <span className={styles.yellowBrace}>{" {"}</span>
           <p className={styles.tabsContentDescription}>{tab.description}</p>
           {tab.extraComponent}
-          <span className={styles.yellowBrace}>{"}"}</span>
+          <span className={styles.yellowBraceEnd}>{"}"}</span>
         </TabsContent>
       ))}
     </Tabs>
