@@ -1,5 +1,5 @@
 import React from 'react'
-import Popup from './Popup'
+import TeamModal from './TeamModal';
 import styles from "@/styles/TabContainer.module.css";
 
 const teamMembers = [
@@ -80,12 +80,12 @@ export default function TeamContainer() {
     <ul>
       <li>
         <h2>BCS Student Association</h2>
-        <Popup membersList={teamMembers} />
+        <TeamModal membersList={teamMembers} />
         <h2>Social Committee</h2>
         <p className={styles.tabsContentDescription}>
           The BCS Student Association oversees the Social Committee, composed of volunteers who help plan social events throughout the school year. Working closely with the Social Coordinator, they are instrumental in making the day-of tasks run smoothly. In addition to social events, they help with assigned tasks related to the BCS Hackathon, our largest event of the year.
         </p>
-        <Popup membersList={committeeMembers} />
+        <TeamModal membersList={committeeMembers} />
       </li>
     </ul>
     </>
