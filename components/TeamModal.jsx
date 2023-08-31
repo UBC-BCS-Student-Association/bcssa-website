@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import {
   Dialog,
@@ -8,20 +8,36 @@ import {
   DialogTitle,
   DialogDescription
 } from "@/components/ui/dialog";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faX } from '@fortawesome/free-solid-svg-icons';
 import styles from "@/styles/TeamModal.module.css";
-import { Button } from '@/components/ui/button';
 
 export default function TeamModal({ membersList }) {
+
+  const [scrollY, setScrollY] = useState(0);
+  const [isDialogOpen, setDialogOpen] = useState(false);
+
+  const saveScroll = () => {
+    setScrollY(window.scrollY);
+    setDialogOpen(true);
+  };
+
+  const closeDialog = () => {
+    setDialogOpen(false);
+  };
+
+  useEffect(() => {
+    if (isDialogOpen) {
+      window.scrollTo(0, scrollY);
+    }
+  }, [isDialogOpen]);
+
   return (
     <>
     <div className={styles.gridContainer}>
       {membersList.map((member, index) => (
         <div key={member.name}>
-          <Dialog onClick={e => e.preventDefault()}>
+          <Dialog onOpenChange={closeDialog}>
             <DialogTrigger>
-              <div className={styles.triggerContainer}>
+              <div className={styles.triggerContainer} onClick={saveScroll}>
                 <div className={styles.diamondWrapper}>
                   <div className={styles.roundImage}>
                     <Image src={member.imageSrc} alt={member.name} layout="fill" objectFit="cover" />
