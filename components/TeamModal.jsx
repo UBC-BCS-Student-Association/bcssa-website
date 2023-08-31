@@ -19,7 +19,7 @@ export default function TeamModal({ membersList }) {
     <div className={styles.gridContainer}>
       {membersList.map((member, index) => (
         <div key={member.name}>
-          <Dialog>
+          <Dialog onClick={e => e.preventDefault()}>
             <DialogTrigger>
               <div className={styles.triggerContainer}>
                 <div className={styles.diamondWrapper}>
