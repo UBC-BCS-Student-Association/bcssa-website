@@ -6,7 +6,7 @@ import { faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons'
 export default function Footer2() {
   return (
     <footer className={styles.footer}>
-         <div className={styles.footerContent}>
+      <div className={styles.footerContent}>
       <div className={styles.disclaimer}>
         <h4 className={styles.footerContentTitle}>Disclaimer</h4>
         <p>
