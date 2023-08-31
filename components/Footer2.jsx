@@ -8,7 +8,7 @@ export default function Footer2() {
     <footer className={styles.footer}>
          <div className={styles.footerContent}>
       <div className={styles.disclaimer}>
-        <h4>Disclaimer</h4>
+        <h4 className={styles.footerContentTitle}>Disclaimer</h4>
         <p>
             The Bachelor of Computer Science Students Association (BCSSA) is a student club 
             for students completing their second degree in the Bachelor of Computer Science (BCS) 
@@ -17,11 +17,11 @@ export default function Footer2() {
         </p>
       </div>
       <div className={styles.acknowledgment}>
-        <h4>Land Acknowledgment</h4>
+        <h4 className={styles.footerContentTitle}>Land Acknowledgment</h4>
         <p>We would like to acknowledge that the land on which we gather is the traditional, ancestral, and unceded territory of the xwməθkwəy̓əm (Musqueam) People.</p>
       </div>
       <div className={styles.social}>
-        <h4>Follow Us</h4>
+        <h4 className={styles.footerContentTitle}>Follow Us</h4>
         <div className={styles.socialIcons}>
         <FontAwesomeIcon
           icon={faLinkedin}

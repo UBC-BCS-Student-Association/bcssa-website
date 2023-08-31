@@ -11,10 +11,15 @@
     justify-content: space-between;
 }
 
+.footerContentTitle {
+    font-weight: 400;
+}
+
 .disclaimer,
 .acknowledgment {
     text-align: left;
     font-size: small;
+    font-weight: 300;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -56,11 +61,11 @@
 @media (min-width: 769px) {
     .disclaimer,
     .acknowledgment {
-        width: 40%;
+        width: 42%;
     }
   
     .social {
-        width: 20%;
+        width: 16%;
     }
 }
 
