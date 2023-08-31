@@ -1,0 +1,98 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    color: #fff;
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.disclaimer,
+.acknowledgment {
+    text-align: left;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 20px 0 20px;
+}
+
+.social {
+    text-align: left;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 20px 0 20px;
+}
+
+.socialIconList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.socialIcon {
+    margin: 5px 15px 0 0;
+    font-size: 2.2rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.socialIcon:hover {
+    color: #f4442c;
+}
+
+.copyright {
+    text-align: center;
+    margin: 0px 0 20px 0;
+    font-size: small;
+}
+
+@media (min-width: 769px) {
+    .disclaimer,
+    .acknowledgment {
+        width: 40%;
+    }
+  
+    .social {
+        width: 20%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .disclaimer,
+    .acknowledgment {
+        width: 38%;
+    }
+  
+    .social {
+        width: 24%;
+    }
+}
+
+@media (max-width: 480px) {
+    .footerContent {
+        flex-direction: column;
+    }
+
+    .disclaimer,
+    .acknowledgment {
+        width: 100%;
+        align-items: center;
+    }
+    .social {
+        width: 100%;
+        padding: 15px;
+        align-items: center;
+    }
+
+    .socialIcon {
+        margin: 5px 5px;
+        font-size: 2rem;
+    }
+}
