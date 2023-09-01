@@ -1,6 +1,5 @@
 import React from 'react';
 import { useContext, useEffect, useState } from 'react';
-import Carousel from './Carousel';
 import { firestore } from "@/firebase/firebase";
 import { getDocs, collection } from "firebase/firestore";
 import styles from '@/styles/Section.module.css'
