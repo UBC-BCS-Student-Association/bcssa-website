@@ -1,31 +1,48 @@
 import React from 'react'
+import { useRouter } from 'next/router';
 import Image from 'next/image'
-import styles from '@/styles/Section.module.css'
+import { Separator } from "@/components/ui/separator"
+import sectionStyles from '@/styles/Section.module.css'
+import heroStyles from '@/styles/Hero.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
-export default function Hero() {
+
+export default function HeroArden() {
+  const router = useRouter();
+
+  const navigateTo = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
-    <div id="hero" className={styles.sectionContainer}>
-      <h1 className="text-5xl font-extrabold text-shadow bg-gradient-to-r from-blue-500 to-purple-500 text-white text-center py-8 w-full md:max-w-3xl mx-auto break-words">
-        UBC BCS Student Association
-      </h1>
-      <p id='landAcknoledgement' className="w-full md:max-w-3xl mx-auto px-4 text-center">
-        <em>
-          Land Acknowledgement: We would like to begin by acknowledging that the land on which we gather is the traditional, ancestral, and unceded territory of the xwməθkwəy̓əm (Musqueam) People
-        </em>
-      </p>
-      {/* <Image
-        src="/bcsteam.JPG"
-        alt="bcs team"
-        width={600}
-        height={400}
-      /> */}
-      <p id='disclaimer' className="w-full md:max-w-3xl mx-auto px-4 text-center">
-        The Bachelor of Computer Science Students Association (BCSSA) is a student club 
-        for students completing their second degree in the Bachelor of Computer Science (BCS) 
-        Program at UBC. We are not providing information on the BCS program; 
-        we are showcasing the BCS Student Association and how we enhance student life!
-      </p>
-    </div>
+    <div id="hero" className={heroStyles.heroContainer}>
+        <div className={sectionStyles.sectionContent}>
+            <Image src="/logo-layered_cropped.png" alt="Logo" width="600" height="300" />
+            <p className={heroStyles.heroText}>
+                UBC Bachelor of Computer Science Student Association
+            </p>
+        </div>
+        <Separator className={heroStyles.heroSeparator} />
+        <div className={heroStyles.socialIconsList}>
+        <FontAwesomeIcon
+            icon={faLinkedin}
+            onClick={() => navigateTo('https://www.linkedin.com/groups/14108803/')}
+            className={heroStyles.socialIcon}
+          />
+          <FontAwesomeIcon
+            icon={faFacebook}
+            onClick={() => navigateTo('https://www.facebook.com/groups/ubcbcsclub/')}
+            className={heroStyles.socialIcon}
+          />
+        </div>
 
+        {/* <p className={heroStyles.heroDisclaimer}>
+            *The Bachelor of Computer Science Students Association (BCSSA) is a student club 
+            for students completing their second degree in the Bachelor of Computer Science (BCS) 
+            Program at UBC. We are not providing information on the BCS program; 
+            we are showcasing the BCS Student Association and how we enhance student life!
+        </p> */}
+    </div>
   )
 }
