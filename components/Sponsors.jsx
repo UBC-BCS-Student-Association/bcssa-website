@@ -62,7 +62,7 @@ export default function Sponsors() {
     <div id="sponsors" className={styles.sectionContainer}>
         <p className={styles.sectionTitle}>Sponsors</p>
         <p className={styles.sectionDescrioption}>
-          Click on the logo to see events they have sponsored.
+          Click on the logo to see events they have sponsored
         </p>
         <Separator className={styles.sectionSeparator} />
         <div className={styles.sectionContent}>
