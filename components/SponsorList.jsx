@@ -14,9 +14,9 @@ function SponsorSection({ sponsors, title }) {
   return (
     <div className={styles.sponsorSection}>
       <h2 className={styles.sponsorTitle}>
-        <span className={styles.yellowBrace}>{"{"}</span>
+        {/* <span className={styles.yellowBrace}>{"{"}</span> */}
         {title}
-        <span className={styles.yellowBraceEnd}>{"}"}</span>
+        {/* <span className={styles.yellowBraceEnd}>{"}"}</span> */}
       </h2>
       <div className={styles.sponsorList}>
         {sponsors.map(sponsor => (
