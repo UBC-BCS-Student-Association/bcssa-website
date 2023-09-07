@@ -30,8 +30,8 @@ const accordionData = [
     content: "Feel free to reach out to our executive team if you’re interested in getting involved with the club. We always welcome those who are eager to get involved!" 
   },
   { 
-    trigger: "What are the benefits of joining the club?", 
-    content: "This question outlines the advantages of becoming a member, such as networking opportunities, skill development, and social connections." 
+    trigger: "What are the benefits of participating in club events?", 
+    content: "Participating in club events offers the chance to expand your network, hone your skills, and build meaningful social relationships." 
   },
   { 
     trigger: "Is there a membership fee, and how is it used?", 

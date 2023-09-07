@@ -31,10 +31,11 @@
 .sectionButton {
     /* position: relative; */
     margin-top: 10%;
-    font-size: large;
+    font-size: 170%;
     font-weight: 400;
     width: 100%;
     border-color: #2e2e2e;
+    border-width: 1.5px;
 }
 
 .sectionSeparator {

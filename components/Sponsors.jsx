@@ -61,6 +61,9 @@ export default function Sponsors() {
   return (
     <div id="sponsors" className={styles.sectionContainer}>
         <p className={styles.sectionTitle}>Sponsors</p>
+        <p className={styles.sectionDescrioption}>
+        Click on the logo to see events they've sponsored.
+        </p>
         <Separator className={styles.sectionSeparator} />
         <div className={styles.sectionContent}>
           <SponsorList monetarySponsors={monetarySponsors} inKindSponsors={inKindSponsors} />

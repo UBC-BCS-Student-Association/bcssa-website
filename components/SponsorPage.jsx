@@ -20,7 +20,7 @@ const SponsorPage = ({ sponsor, events }) => {
         
         <div className={sectionStyles.sectionContent}>
           <h2 className={sectionStyles.sectionTitle}>Events Sponsored by {sponsor.sponsorName}</h2>
-          <span className={sectionStyles.yellowBrace}>{" {"}</span>
+          {/* <span className={sectionStyles.yellowBrace}>{" {"}</span> */}
         
           {events.map((event) => (
             <div key={event.eventId} className={eventStyles.eventItem}>
@@ -50,7 +50,7 @@ const SponsorPage = ({ sponsor, events }) => {
               )}
             </div>
           ))}
-          <span className={sectionStyles.yellowBraceEnd}>{"}"}</span>
+          {/* <span className={sectionStyles.yellowBraceEnd}>{"}"}</span> */}
 
           <Link href="/#sponsors">
             <Button className={sectionStyles.sectionButton} variant="outline">
