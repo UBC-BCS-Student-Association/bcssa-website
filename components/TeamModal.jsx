@@ -38,15 +38,20 @@ export default function TeamModal({ membersList }) {
           <Dialog onOpenChange={closeDialog}>
             <DialogTrigger>
               <div className={styles.triggerContainer} onClick={saveScroll}>
-                <div className={styles.diamondWrapper}>
+                <div className={styles.circleWrapper}>
                   <div className={styles.roundImage}>
                     <Image src={member.imageSrc} alt={member.name} layout="fill" objectFit="cover" />
                   </div>
                 </div>
                 <div className={styles.textContainer}>
-                  {member.position}
-                  <br />
-                  {member.name}
+                  <p className={styles.memberPosition}>
+                    {member.position}
+                  </p>
+                  <p className={styles.memberName}>
+                    {member.name}
+                  </p>
+                  {/* <br /> */}
+                  {/* {member.name} */}
                 </div>
               </div>
             </DialogTrigger>

@@ -34,6 +34,7 @@ const eventsData = [
     eventName: 'BCS Hacks 2023',
     eventDescription: 'event description',
     eventImages: [
+      '/events/2023-03-24-25-BCS-Hacks 2023/0A4BD491-67C5-4E5C-ABB2-3FBFCC3FCBFE.jpeg',
       '/events/2023-03-24-25-BCS-Hacks 2023/DSC04145.JPG',
       '/events/2023-03-24-25-BCS-Hacks 2023/DSC04252.JPG',
       '/events/2023-03-24-25-BCS-Hacks 2023/DSC04286.JPG',
