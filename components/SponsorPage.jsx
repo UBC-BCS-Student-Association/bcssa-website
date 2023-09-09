@@ -19,7 +19,7 @@ const SponsorPage = ({ sponsor, events }) => {
         <Separator className={sectionStyles.sectionSeparator} />
         
         <div className={sectionStyles.sectionContent}>
-          <h2 className={sectionStyles.sectionTitle}>Events Sponsored by {sponsor.sponsorName}</h2>
+          <h2 className={sectionStyles.sectionSubHeading}>Events Sponsored by {sponsor.sponsorName}</h2>
           {/* <span className={sectionStyles.yellowBrace}>{" {"}</span> */}
         
           {events.map((event) => (
