@@ -4,25 +4,25 @@ import styles from "@/styles/TabContainer.module.css";
 
 const teamMembers = [
   {
-    imageSrc: "/team/DSC04382.JPG",
+    imageSrc: "/team/DSC04382_cropped.jpg",
     position: "President",
     name: "Chloe Van",
     content: "After obtaining my BSc in Pharmacy from UBC, I worked as a pharmacist for 4.5 years before embarking on a career change and enrolling in the BCS program in 2022. My decision to switch careers is fueled by my desire to be a part of the hands-on innovation I wish to see, which I believe is crucial for advancing the pharmacy profession and beyond. Outside of work and studies, I’m a huge foodie, travel addict, and music explorer. So although UBC and Vancouver are home I have many adventures we can chat about if you’re interested!"
   },
   {
-    imageSrc: "/team/DSC04385.JPG",
+    imageSrc: "/team/DSC04385_cropped.jpg",
     position: "Vice President",
     name: "Colleen Rideout",
     content: "I worked for 5 years in the real estate industry before completing my Bachelor of Arts in Philosophy & Psychology at UBC (attended 2009-2012, 2018-2020). I decided to pursue a second degree in Computer Science to learn more about data collection and processing for applications in psychological research."
   },
   {
-    imageSrc: "/team/DSC04392.JPG",
+    imageSrc: "/team/DSC04392_cropped.jpg",
     position: "Treasurer",
     name: "Oliver Luo",
     content: "My previous experience is in the med-tech industry and my first degree is in mechatronics at SFU. In my free time, I tinker with 3D printers and build fun mechanical projects."
   },
   {
-    imageSrc: "/team/DSC04395.JPG",
+    imageSrc: "/team/DSC04395_cropped.jpg",
     position: "Social Coordinator",
     name: "Jonah Curl",
     content: "I completed my first degree in Chemistry at the University of Alberta in Edmonton, then did a year of Pharmacy at UBC before realizing that my creativity and interests are more aligned with Computer Science and Software Development. You can often find me skiing or hiking in the mountains or playing volleyball in my free time. I am also an experienced Tutor and Teaching Assistant so do not hesitate to ask for help if you see me in the lounge or in class. :)"
@@ -49,25 +49,25 @@ const committeeMembers = [
     content: ""
   },
   {
-    imageSrc: "/team/DSC04409.JPG",
+    imageSrc: "/team/DSC04409_cropped.jpg",
     position: "Social Committee",
     name: "Sangita Dutta",
     content: ""
   },
   {
-    imageSrc: "/team/DSC04397.JPG",
+    imageSrc: "/team/DSC04397_cropped.jpg",
     position: "Social Committee",
     name: "Kashish Garg",
     content: ""
   },
   {
-    imageSrc: "/team/DSC04402.JPG",
+    imageSrc: "/team/DSC04402_cropped.jpg",
     position: "Social Committee",
     name: "Phillip Tellier",
     content: ""
   },
   {
-    imageSrc: "/team/DSC04407.JPG",
+    imageSrc: "/team/DSC04407_cropped.jpg",
     position: "Social Committee",
     name: "Helen Zhou",
     content: ""

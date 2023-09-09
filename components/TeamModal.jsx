@@ -36,28 +36,30 @@ export default function TeamModal({ membersList }) {
       {membersList.map((member, index) => (
         <div key={member.name}>
           <Dialog onOpenChange={closeDialog}>
-            <DialogTrigger>
-              <div className={styles.triggerContainer} onClick={saveScroll}>
-                <div className={styles.circleWrapper}>
-                  <div className={styles.roundImage}>
-                    <Image src={member.imageSrc} alt={member.name} layout="fill" objectFit="cover" />
+            <div className={styles.triggerContainer}>
+              <DialogTrigger style={{ width: '85%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div className={styles.triggerButton} onClick={saveScroll}>
+                  <div className={styles.circleWrapper}>
+                    <div className={styles.roundImage}>
+                      <Image src={member.imageSrc} alt={member.name} layout="fill" objectFit="cover" />
+                    </div>
+                  </div>
+                  <div className={styles.textContainer}>
+                    <p className={styles.memberPosition}>
+                      {member.position}
+                    </p>
+                    <p className={styles.memberName}>
+                      {member.name}
+                    </p>
+                    {/* <br /> */}
+                    {/* {member.name} */}
                   </div>
                 </div>
-                <div className={styles.textContainer}>
-                  <p className={styles.memberPosition}>
-                    {member.position}
-                  </p>
-                  <p className={styles.memberName}>
-                    {member.name}
-                  </p>
-                  {/* <br /> */}
-                  {/* {member.name} */}
-                </div>
-              </div>
-            </DialogTrigger>
+              </DialogTrigger>
+            </div>
               <DialogContent>
                 <div className={styles.contentImageContainer}>
-                  <Image src={member.imageSrc} alt={member.name} width="250" height="64" />
+                  <Image src={member.imageSrc} alt={member.name} width="350" height="200" />
                 </div>
                 <DialogHeader>
                   <DialogDescription>{member.position}</DialogDescription>
