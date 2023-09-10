@@ -11,9 +11,7 @@ export default function EventCalendar() {
       <>
       <div className={styles.iframeContainer}>
         <iframe 
-          // src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FVancouver&showDate=1&showPrint=1&showTabs=1&showCalendars=1&title=BCSSA%20Events&src=bTc3dTV1NGJxMHZlMWRkY25sbmFwbGVhOWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=bjNuc21lMXEzdnZmbzhvYzkwbGF2bmRpZ29AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%239E69AF&color=%238E24AA"
-          src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FVancouver&src=bjNuc21lMXEzdnZmbzhvYzkwbGF2bmRpZ29AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%238E24AA"
-          // src="https://calendar.google.com/calendar/embed?src=a1287f60da606277e420338be82f04d21509a15db257cab9f66eb1cc75cb5106%40group.calendar.google.com&ctz=America%2FVancouver"
+          src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FVancouver&title=BCSSA%20Events&src=bTc3dTV1NGJxMHZlMWRkY25sbmFwbGVhOWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=bjNuc21lMXEzdnZmbzhvYzkwbGF2bmRpZ29AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%239E69AF&color=%238E24AA"
           scrolling="no"
         >
         </iframe>
