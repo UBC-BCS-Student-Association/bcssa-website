@@ -59,7 +59,7 @@ export default function TeamModal({ membersList }) {
             </div>
               <DialogContent>
                 <div className={styles.contentImageContainer}>
-                  <Image src={member.imageSrc} alt={member.name} width="350" height="200" />
+                  <Image src={member.imageSrc} alt={member.name} width="300" height="200" />
                 </div>
                 <DialogHeader>
                   <DialogDescription>{member.position}</DialogDescription>
