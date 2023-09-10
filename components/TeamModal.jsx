@@ -57,7 +57,7 @@ export default function TeamModal({ membersList }) {
                 </div>
               </DialogTrigger>
             </div>
-              <DialogContent>
+              <DialogContent style={{ maxHeight: '80vh', overflow: 'hidden' }}>
                 <div className={styles.contentImageContainer}>
                   <Image src={member.imageSrc} alt={member.name} width="300" height="200" />
                 </div>
@@ -65,7 +65,9 @@ export default function TeamModal({ membersList }) {
                   <DialogDescription>{member.position}</DialogDescription>
                   <DialogTitle>{member.name}</DialogTitle>
                 </DialogHeader>
-                <p>{member.content}</p>
+                <div className={styles.contentContainer}>
+                  <p>{member.content}</p>
+                </div>
               </DialogContent>
           </Dialog>
         </div>
