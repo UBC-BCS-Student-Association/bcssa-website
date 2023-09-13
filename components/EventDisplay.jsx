@@ -21,7 +21,7 @@ function EventItem({ eventDate, eventDescription, eventImages, eventName }) {
         return new Date(year, month - 1, day).toLocaleDateString('en-US', options);
     };
     if (dateString.includes('to')) {
-        return dateString.split(' to ').map(formatUTCDate).join(' to ');
+        return dateString.split(' to ').map(formatUTCDate).join(' - ');
     } else {
         return formatUTCDate(dateString);
     }
