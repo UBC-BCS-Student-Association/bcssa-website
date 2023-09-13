@@ -15,11 +15,11 @@ const accordionData = [
   },
   { 
     trigger: "When and where does the club meet?", 
-    content: <>We typically meet weekly or bi-weekly, please contact us <Link href="/#contact"><span className={styles.clickableLink}>here</span></Link> if you want to join our meetings.</>
+    content: <>We typically meet weekly, please contact us <Link href="/#contact"><span className={styles.clickableLink}>here</span></Link> if you want to join our meetings.</>
   },
   { 
     trigger: "What types of activities/events does the club organize?", 
-    content: "We host hackathons, office tours, workshops, guest speakers, and social gatherings for our members." 
+    content: "We host hackathons, office tours, workshops, guest speakers, social gatherings and mentorship program(s) for our members" 
   },
   { 
     trigger: "Can I join even if I'm not enrolled in the 2nd-Degree BCS Program?", 

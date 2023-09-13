@@ -27,6 +27,8 @@ const SponsorPage = ({ sponsor, events }) => {
               <div className={eventStyles.eventDetails}>
                 <h3 className={eventStyles.eventName}>{event.eventName}</h3>
                 <p>{event.eventDate}</p>
+                <Separator className={eventStyles.separator} />
+                <p className={eventStyles.eventDescription}>{event.eventDescription}</p>
               </div>
 
               {event.eventImages && event.eventImages.length > 0 && (

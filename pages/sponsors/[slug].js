@@ -16,9 +16,21 @@ const getHttpsUrl = async (gsUrl) => {
   }
 };
 
+// const formatDate = (dateString) => {
+//   const options = { year: 'numeric', month: 'short', day: '2-digit' };
+//   return new Date(dateString).toLocaleDateString('en-US', options);
+// };
 const formatDate = (dateString) => {
   const options = { year: 'numeric', month: 'short', day: '2-digit' };
-  return new Date(dateString).toLocaleDateString('en-US', options);
+  const formatUTCDate = (str) => {
+      const [year, month, day] = str.split("-").map(part => parseInt(part, 10));
+      return new Date(year, month - 1, day).toLocaleDateString('en-US', options);
+  };
+  if (dateString.includes('to')) {
+      return dateString.split(' to ').map(formatUTCDate).join(' to ');
+  } else {
+      return formatUTCDate(dateString);
+  }
 };
 
 
@@ -58,10 +70,11 @@ export async function getStaticProps({ params }) {
       const data = doc.data();
       
       // firestore timestamp
-      if (data.eventDate && data.eventDate.toDate) {
-        data.eventDate = formatDate(data.eventDate.toDate().toISOString());
-        console.log(data.eventDate);
-      }
+      // if (data.eventDate && data.eventDate.toDate) {
+      //   data.eventDate = formatDate(data.eventDate.toDate().toISOString());
+      //   console.log(data.eventDate);
+      // }
+      data.eventDate = formatDate(data.eventDate);
 
       return data;
   });
