@@ -5,13 +5,28 @@ import { Button } from "@/components/ui/button";
 import eventStyles from '@/styles/EventItem.module.css';
 import sectionStyles from '@/styles/Section.module.css'
 import { Carousel } from 'react-responsive-carousel';
+import { Separator } from '@/components/ui/separator';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 function EventItem({ eventDate, eventDescription, eventImages, eventName }) {
+  // const formatDate = (dateString) => {
+  //   const options = { year: 'numeric', month: 'short', day: '2-digit' };
+  //   const [year, month, day] = dateString.split("-").map(str => parseInt(str, 10));
+  //   return new Date(year, month - 1, day).toLocaleDateString('en-US', options);
+  // };
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: 'short', day: '2-digit' };
-    return new Date(dateString).toLocaleDateString('en-US', options);
-  };
+    const formatUTCDate = (str) => {
+        const [year, month, day] = str.split("-").map(part => parseInt(part, 10));
+        return new Date(year, month - 1, day).toLocaleDateString('en-US', options);
+    };
+    if (dateString.includes('to')) {
+        return dateString.split(' to ').map(formatUTCDate).join(' to ');
+    } else {
+        return formatUTCDate(dateString);
+    }
+};
+
   
   const formattedEventDate = formatDate(eventDate);
 
@@ -20,7 +35,8 @@ function EventItem({ eventDate, eventDescription, eventImages, eventName }) {
       <div className={eventStyles.eventDetails}>
           <h3 className={eventStyles.eventName}>{eventName}</h3>
           <p>{formattedEventDate}</p>
-          {/* <p>{eventDescription}</p> */}
+          <Separator className={eventStyles.separator} />
+          <p className={eventStyles.eventDescription}>{eventDescription}</p>
       </div>
       
       {eventImages && eventImages.length > 0 && (
@@ -28,15 +44,17 @@ function EventItem({ eventDate, eventDescription, eventImages, eventName }) {
           <Carousel dynamicHeight={false} showThumbs={false} infiniteLoop={true} swipeable={true} showIndicators={eventImages.length > 1}>
               {eventImages.map((imgSrc, idx) => (
                 <div key={idx} className={eventStyles.carouselItem}>
-                  <Image 
-                    src={imgSrc} 
-                    alt={`${eventName} image ${idx + 1}`} 
-                    width={500} 
-                    height={300} 
-                    layout="fixed" 
-                    objectFit="cover"
-                    objectPosition="center center"
-                  />
+                  {/* <div className={eventStyles.imageContainer}> */}
+                    <Image 
+                      src={imgSrc} 
+                      alt={`${eventName} image ${idx + 1}`} 
+                      width={450} 
+                      height={350} 
+                      layout="intrinsic" 
+                      objectFit="cover"
+                      objectPosition="center center"
+                    />
+                  {/* </div> */}
                 </div>
               ))}
           </Carousel>
