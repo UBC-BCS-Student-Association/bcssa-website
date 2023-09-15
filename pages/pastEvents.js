@@ -26,14 +26,15 @@ const eventsData = [
   {
     eventDate: '2023-02-21',
     eventName: 'SAP Resume Workshop',
-    eventDescription: 'BCSSA partnered with SAP to host a resume workshop at SAP&#39;s downtown office. BCSers had the opportunity to learn from various SAP recruiters, including those focused on the iXp internship program and full-time new hires. The event featured a brief panel discussion, resume reviews, and a Q&A session.',
+    eventDescription: "BCSSA partnered with SAP to host a resume workshop at SAP's downtown office. BCSers had the opportunity to learn from various SAP recruiters, including those focused on the iXp internship program and full-time new hires. The event featured a brief panel discussion, resume reviews, and a Q&A session.",
     eventImages: ['/events/2023-02-21-SAP-Resume-Workshop/890D62A4-ACB9-45E0-BEBC-CE199EE657A1_1_105_c.jpeg'],
   },
   {
     eventDate: '2023-03-24 to 2023-03-25',
     eventName: 'BCS Hacks 2023',
-    eventDescription: "BCSSA's largest annual event, BCS Hacks, is a 2-day hackathon where teams of 5 BCSers collaborate to create functional projects. These projects are then presented to industry and faculty judges, with opportunities for early-bird and cash prizes. Throughout the event, industry mentors are on hand to provide guidance. In preparation for the hackathon, two workshops were held: BCS Hacks Workshop #1: Introduction to React Native and Expo. BCS Hacks Workshop #2: Introduction to GitHub, Dev Tools, and Web Development.",
+    eventDescription: "BCSSA's largest annual event, BCS Hacks, is a 2-day hackathon where teams of 5 BCSers collaborate to create functional projects. These projects are then presented to industry and faculty judges, with opportunities for early-bird and cash prizes. Throughout the event, industry mentors are on hand to provide guidance. In preparation for the hackathon, two workshops were held: BCS Hacks Workshop #1: Introduction to React Native and Expo & BCS Hacks Workshop #2: Introduction to GitHub, Dev Tools, and Web Development.",
     eventImages: [
+      '/events/2023-03-24-25-BCS-Hacks 2023/DSC04375.JPG',
       '/events/2023-03-24-25-BCS-Hacks 2023/0A4BD491-67C5-4E5C-ABB2-3FBFCC3FCBFE.jpeg',
       '/events/2023-03-24-25-BCS-Hacks 2023/DSC04145.JPG',
       '/events/2023-03-24-25-BCS-Hacks 2023/DSC04252.JPG',
