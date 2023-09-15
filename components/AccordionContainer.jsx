@@ -19,7 +19,7 @@ const accordionData = [
   },
   { 
     trigger: "What types of activities/events does the club organize?", 
-    content: "We host hackathons, office tours, workshops, guest speakers, social gatherings and mentorship program(s) for our members" 
+    content: "We host hackathons, office tours, workshops, guest speakers, social gatherings and mentorship program(s) for our members." 
   },
   { 
     trigger: "Can I join even if I'm not enrolled in the 2nd-Degree BCS Program?", 
@@ -39,7 +39,7 @@ const accordionData = [
   },
   { 
     trigger: "How can I stay updated on club activities and announcements?", 
-    content: <>For large events, we announce them via UBC Email systems that are sent directly to your student emails. We also have an event calendar <Link href="/#events"><span className={styles.clickableLink}>here</span></Link>.</>
+    content: <>For large events, we announce them via UBC Email systems that are sent directly to your student emails. For social events, you can find information in our Facebook group or our event calendar <Link href="/#events"><span className={styles.clickableLink}>here</span></Link>.</>
   },
   { 
     trigger: "Can I suggest new ideas or propose events for the club?", 
