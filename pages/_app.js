@@ -6,15 +6,16 @@ import '@/styles/globals.css'
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
+  const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
   useEffect(() => {
     const handleRouteChange = (url) => {
-      window.gtag('config', 'G-S7YGDXDCCS', {
+      window.gtag('config', GA_MEASUREMENT_ID, {
         page_path: url,
       });
     };
 
-    // when the component is mounted, subscribe to router changes and log those page views
+    // subscribe to router changes and log page views
     router.events.on('routeChangeComplete', handleRouteChange);
 
     // if the component is unmounted, unsubscribe from the event
