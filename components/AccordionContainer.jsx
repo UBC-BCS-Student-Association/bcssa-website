@@ -51,22 +51,6 @@ const accordionData = [
   },
 ];
 
-
-// export function AccordionContainer() {
-//   return (
-//       <Accordion type="multiple" collapsible className={styles.accordionContainer}>
-//         {accordionData.map((item, index) => (
-//           <div className={styles.itemWrapper} key={`wrapper-${index}`}>
-//           <AccordionItem  className={styles.accordionItem} key={`item-${index}`} value={`item-${index}`}>
-//             <AccordionTrigger className={styles.accordionTrigger}>{item.trigger}</AccordionTrigger>
-//             <AccordionContent className={styles.accordionContent}>{item.content}</AccordionContent>
-//           </AccordionItem>
-//           </div>
-//         ))}
-//       </Accordion>
-//   )
-// }
-
 export function AccordionContainer() {
   const firstHalf = accordionData.slice(0, Math.ceil(accordionData.length / 2));
   const secondHalf = accordionData.slice(Math.ceil(accordionData.length / 2));
