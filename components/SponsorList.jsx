@@ -1,6 +1,6 @@
-import React from 'react';
-import styles from '@/styles/SponsorList.module.css';
-import { Separator } from './ui/separator';
+import React from "react";
+import styles from "@/styles/SponsorList.module.css";
+import { Separator } from "./ui/separator";
 
 function SponsorLogo({ logo, name, url }) {
   return (
@@ -13,13 +13,9 @@ function SponsorLogo({ logo, name, url }) {
 function SponsorSection({ sponsors, title }) {
   return (
     <div className={styles.sponsorSection}>
-      <h2 className={styles.sponsorTitle}>
-        {/* <span className={styles.yellowBrace}>{"{"}</span> */}
-        {title}
-        {/* <span className={styles.yellowBraceEnd}>{"}"}</span> */}
-      </h2>
+      <h2 className={styles.sponsorTitle}>{title}</h2>
       <div className={styles.sponsorList}>
-        {sponsors.map(sponsor => (
+        {sponsors.map((sponsor) => (
           <SponsorLogo key={sponsor.name} {...sponsor} />
         ))}
       </div>
@@ -35,6 +31,6 @@ const SponsorList = ({ monetarySponsors, inKindSponsors }) => {
       <SponsorSection sponsors={inKindSponsors} title="In-Kind Sponsors" />
     </div>
   );
-}
+};
 
 export default SponsorList;

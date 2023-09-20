@@ -3,16 +3,16 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "@/styles/Navbar.module.css";
 import NavItem from "./NavItem";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const MENU_LIST = [
-    { text: "Home", href: "/#hero" },
-    { text: "About", href: "/#about" },
-    { text: "Events", href: "/#events" },
-    { text: "Sponsors", href: "/#sponsors" },
-    { text: "FAQ", href: "/#faq" },
-    { text: "Contact", href: "/#contact" },
+  { text: "Home", href: "/#hero" },
+  { text: "About", href: "/#about" },
+  { text: "Events", href: "/#events" },
+  { text: "Sponsors", href: "/#sponsors" },
+  { text: "FAQ", href: "/#faq" },
+  { text: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
@@ -34,20 +34,21 @@ const Navbar = () => {
     <header className={styles.container}>
       <nav className={styles.nav}>
         <Link href={"/"}>
-          <Image src="/logo-simple-cropped.png" alt="Logo" width="150" height="32" />
+          <Image
+            src="/logo-simple-cropped.png"
+            alt="Logo"
+            width="150"
+            height="32"
+          />
         </Link>
         <div
           onClick={() => setNavActive(!navActive)}
-          className={styles.menuBar}
-        >
+          className={styles.menuBar}>
           <FontAwesomeIcon icon={faBars} />
         </div>
         <div className={`${navActive ? styles.active : ""} ${styles.menuList}`}>
           {MENU_LIST.map((menu, idx) => (
-            <div
-              onClick={() => handleClick(idx, menu.href)}
-              key={menu.text}
-            >
+            <div onClick={() => handleClick(idx, menu.href)} key={menu.text}>
               <NavItem active={activeIdx === idx} {...menu} />
             </div>
           ))}

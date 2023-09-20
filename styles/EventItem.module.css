@@ -1,53 +1,53 @@
 .eventDisplay {
-    align-items: center;
+  align-items: center;
 }
 
 .eventItem {
-    display: flex;
-    align-items: center; 
-    justify-content: space-between;
-    width: 100%; 
-    margin-top: 4%;
-    margin-bottom: 11%;
-    flex-direction: row; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 4%;
+  margin-bottom: 11%;
+  flex-direction: row;
 }
 
 .eventName {
-    font-size: 180%;
-    font-weight: 400;
+  font-size: 180%;
+  font-weight: 400;
 }
 
 .eventDetails {
-    flex: 1;
-    padding: 0 15px;
-    font-weight: 300;
-    align-self: flex-start;
-    margin-bottom: 3%;
-    margin-right: 30px;
+  flex: 1;
+  padding: 0 15px;
+  font-weight: 300;
+  align-self: flex-start;
+  margin-bottom: 3%;
+  margin-right: 30px;
 }
 
 .eventDescription {
-    margin-top: 5px;
-    font-size: 120%;
+  margin-top: 5px;
+  font-size: 120%;
 }
 
 .carouselContainer {
-    position: relative;
-    width: 55%;
-    height: 100%;
-    /* max-height: 500px;  */
-    overflow: hidden;
+  position: relative;
+  width: 55%;
+  height: 100%;
+  /* max-height: 500px;  */
+  overflow: hidden;
 }
 
 .carouselItem {
-    position: relative;
-    /* width: auto; */
-    /* height: 100%; */
-    max-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    overflow: hidden;
+  position: relative;
+  /* width: auto; */
+  /* height: 100%; */
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 /* .imageContainer {
@@ -57,26 +57,26 @@
 } */
 
 .separator {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border-color: gray;
-    border-width: 1px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-color: gray;
+  border-width: 1px;
 }
 
 @media (max-width: 768px) {
-    .eventItem {
-        flex-direction: column;
-    }
-    .eventName {
-        font-size: 140%;
-    }
-    .eventDescription {
-        font-size: 100%;
-    }
-    .carouselContainer {
-        width: 90%;
-    }
-    .eventDetails {
-        margin-right: 0px;
-    }
+  .eventItem {
+    flex-direction: column;
+  }
+  .eventName {
+    font-size: 140%;
+  }
+  .eventDescription {
+    font-size: 100%;
+  }
+  .carouselContainer {
+    width: 90%;
+  }
+  .eventDetails {
+    margin-right: 0px;
+  }
 }
