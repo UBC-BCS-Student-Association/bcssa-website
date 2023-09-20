@@ -36,7 +36,7 @@ const teamMembers = [
     position: "Webmaster",
     name: "Arden Choi",
     content:
-      "I began my academic journey in Psychology with a focus on neuroscience. While I considered graduate school, I soon realized my passion was somewhere more hands-on and directly connected with everyday applications. This led me to Computer Science, blending perfectly with my love for math and logic. It's been an exciting journey ever since, constantly learning and creating new things. This website is one of the projects I've built from scratch. If you have any feedback or suggestions about the site, please reach out!",
+      "I began my academic journey in Psychology with a focus on neuroscience. While I considered graduate school, I soon realized my passion was somewhere more hands-on and directly connected with everyday applications. This led me to Computer Science, blending perfectly with my love for math and logic. It's been an exciting journey ever since, constantly learning and creating new things. This website is one of the projects I've built from scratch while learning about new tech stack. If you have any feedback or suggestions about the site, please reach out!",
   },
   {
     imageSrc: "/logo-shield.png",
