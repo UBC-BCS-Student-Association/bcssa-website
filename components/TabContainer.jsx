@@ -1,6 +1,6 @@
-import React from 'react'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import TeamContainer from "./TeamContainer"
+import React from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import TeamContainer from "./TeamContainer";
 import styles from "@/styles/TabContainer.module.css";
 
 const tabDetails = [
@@ -31,40 +31,40 @@ const tabDetails = [
     title: "Team",
     contentTitle: "The Who",
     description: `All students admitted into the BCS Program are club members of the BCSSA. Our members are mature, high achieving learners that hold a bachelor’s degree in another industry. The members’ diverse backgrounds include and are not limited to, health care, business, arts, engineering and sciences. We do not require students  to pay membership fees and they benefit from all of our events at no cost to them.`,
-    extraComponent: <TeamContainer />
+    extraComponent: <TeamContainer />,
   },
 ];
-
 
 export default function TabContainer() {
   return (
     <>
-    <Tabs className={styles.tabs} defaultValue="tab1">
-      <TabsList className={styles.tabsList}>
+      <Tabs className={styles.tabs} defaultValue="tab1">
+        <TabsList className={styles.tabsList}>
+          {tabDetails.map((tab, index) => (
+            <TabsTrigger
+              key={index}
+              className={styles.tabsTrigger}
+              value={tab.value}>
+              {tab.title}
+            </TabsTrigger>
+          ))}
+        </TabsList>
         {tabDetails.map((tab, index) => (
-          <TabsTrigger key={index} className={styles.tabsTrigger} value={tab.value}>
-            {tab.title}
-          </TabsTrigger>
-        ))}
-      </TabsList>
-      {tabDetails.map((tab, index) => (
-        <TabsContent key={index} value={tab.value}>
-          <div className={styles.contentWrapper}>
-            {/* <p className={styles.tabsContentTitle}>
+          <TabsContent key={index} value={tab.value}>
+            <div className={styles.contentWrapper}>
+              {/* <p className={styles.tabsContentTitle}>
               <span className={styles.yellowBrace}>{"{"}</span>
               {tab.contentTitle}
               <span className={styles.yellowBraceEnd}>{"}"}</span>
             </p> */}
-            {/* <div className={styles.rightContent}> */}
+              {/* <div className={styles.rightContent}> */}
               <p className={styles.tabsContentDescription}>{tab.description}</p>
               {tab.extraComponent}
-            {/* </div> */}
-          </div>
-        </TabsContent>
-      ))}
-    </Tabs>
+              {/* </div> */}
+            </div>
+          </TabsContent>
+        ))}
+      </Tabs>
     </>
-  )
+  );
 }
-
-

@@ -1,103 +1,103 @@
 .footer {
-    display: flex;
-    flex-direction: column;
-    background-color: #333;
-    color: #fff;
+  display: flex;
+  flex-direction: column;
+  background-color: #333;
+  color: #fff;
 }
 
 .footerContent {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .footerContentTitle {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .disclaimer,
 .acknowledgment {
-    text-align: left;
-    font-size: small;
-    font-weight: 300;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px 20px 0 20px;
+  text-align: left;
+  font-size: small;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 20px 0 20px;
 }
 
 .social {
-    text-align: left;
-    font-size: small;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px 20px 0 20px;
+  text-align: left;
+  font-size: small;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 20px 0 20px;
 }
 
 .socialIconList {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .socialIcon {
-    margin: 5px 15px 0 0;
-    font-size: 2.2rem;
-    cursor: pointer;
-    transition: color 0.2s ease;
+  margin: 5px 15px 0 0;
+  font-size: 2.2rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
 }
 
 .socialIcon:hover {
-    color: #f4442c;
+  color: #f4442c;
 }
 
 .copyright {
-    text-align: center;
-    margin: 0px 0 20px 0;
-    font-size: small;
+  text-align: center;
+  margin: 0px 0 20px 0;
+  font-size: small;
 }
 
 @media (min-width: 769px) {
-    .disclaimer,
-    .acknowledgment {
-        width: 42%;
-    }
-  
-    .social {
-        width: 16%;
-    }
+  .disclaimer,
+  .acknowledgment {
+    width: 42%;
+  }
+
+  .social {
+    width: 16%;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-    .disclaimer,
-    .acknowledgment {
-        width: 38%;
-    }
-  
-    .social {
-        width: 24%;
-    }
+  .disclaimer,
+  .acknowledgment {
+    width: 38%;
+  }
+
+  .social {
+    width: 24%;
+  }
 }
 
 @media (max-width: 480px) {
-    .footerContent {
-        flex-direction: column;
-    }
+  .footerContent {
+    flex-direction: column;
+  }
 
-    .disclaimer,
-    .acknowledgment {
-        width: 100%;
-        align-items: center;
-    }
-    .social {
-        width: 100%;
-        padding: 15px;
-        align-items: center;
-    }
+  .disclaimer,
+  .acknowledgment {
+    width: 100%;
+    align-items: center;
+  }
+  .social {
+    width: 100%;
+    padding: 15px;
+    align-items: center;
+  }
 
-    .socialIcon {
-        margin: 5px 5px;
-        font-size: 2rem;
-    }
+  .socialIcon {
+    margin: 5px 5px;
+    font-size: 2rem;
+  }
 }

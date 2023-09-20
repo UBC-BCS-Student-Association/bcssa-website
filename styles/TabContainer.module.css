@@ -1,60 +1,60 @@
 .tabs {
-    /* margin-left: 5%; */
-    /* margin-right: 5%; */
-    /* width: 80%; */
-    /* align-items: center; */
+  /* margin-left: 5%; */
+  /* margin-right: 5%; */
+  /* width: 80%; */
+  /* align-items: center; */
 }
 
 .tabsList {
-    display: flex;
-    justify-content: space-between;
-    /* width: 100%; */
-    padding: 4px;
-    background-color: white;
+  display: flex;
+  justify-content: space-between;
+  /* width: 100%; */
+  padding: 4px;
+  background-color: white;
 }
 
 .tabsTrigger {
-    flex: 1; /* tabs grow and shrink as needed */
-    text-align: center;
-    font-size: large;
+  flex: 1; /* tabs grow and shrink as needed */
+  text-align: center;
+  font-size: large;
 }
 
 .tabsTrigger:hover {
-    font-size: x-large;
+  font-size: x-large;
 }
 
-.tabsTrigger[data-state='active'] {
-    background-color: white;
-    color: #000;
-    font-size: x-large;
-    box-shadow: none;
+.tabsTrigger[data-state="active"] {
+  background-color: white;
+  color: #000;
+  font-size: x-large;
+  box-shadow: none;
 }
 
 .contentWrapper {
-    padding: 4%;
-    /* display: flex;
+  padding: 4%;
+  /* display: flex;
     justify-content: space-between; */
 }
-  
+
 .rightContent {
-    flex: 1;
+  flex: 1;
 }
 
 .tabsContentTitle {
-    font-size: x-large;
+  font-size: x-large;
 }
 
 .yellowBrace {
-    color: #f0b15d;
-    font-size: xx-large;
-    margin-right: 20px;
-}  
+  color: #f0b15d;
+  font-size: xx-large;
+  margin-right: 20px;
+}
 
 .yellowBraceEnd {
-    color: #f0b15d;
-    font-size: xx-large;
-    margin-left: 20px;
-}  
+  color: #f0b15d;
+  font-size: xx-large;
+  margin-left: 20px;
+}
 
 /* .tabsContentTitle::after {
     content: "{";
@@ -66,42 +66,40 @@
 } */
 
 .tabsContentDescription {
-    margin-top: 1%;
-    margin-bottom: 2%;
-    font-weight: 400;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  font-weight: 400;
 }
 
 .teamTitle {
-    font-size: large;
-    font-weight: 400;
-    text-align: center;
-    margin-top: 5%;
+  font-size: large;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 5%;
 }
 
-
 @media (max-width: 768px) {
-    
 }
 
 @media (max-width: 480px) {
-    .tabsTrigger {
-        font-size: medium;
-    }
-    .tabsTrigger:hover {
-        font-size: large;
-    }
-    .tabsTrigger[data-state='active'] {
-        font-size: large;
-    }
-    .tabsContentDescription {
-        /* text-indent: 5%; */
-        margin-left: 2%;
-    }
-    .contentWrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-    .rightContent {
-        margin-top: 1rem;
-    }
+  .tabsTrigger {
+    font-size: medium;
+  }
+  .tabsTrigger:hover {
+    font-size: large;
+  }
+  .tabsTrigger[data-state="active"] {
+    font-size: large;
+  }
+  .tabsContentDescription {
+    /* text-indent: 5%; */
+    margin-left: 2%;
+  }
+  .contentWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .rightContent {
+    margin-top: 1rem;
+  }
 }

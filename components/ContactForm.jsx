@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import styles from '@/styles/ContactForm.module.css';
+import React, { useState } from "react";
+import styles from "@/styles/ContactForm.module.css";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
-import { Separator } from "@/components/ui/separator"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { Separator } from "@/components/ui/separator";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 export default function ContactForm() {
   const initialState = {
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   };
 
   const [formState, setFormState] = useState(initialState);
@@ -19,30 +19,36 @@ export default function ContactForm() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormState(prevState => ({ ...prevState, [name]: value }));
+    setFormState((prevState) => ({ ...prevState, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
+      const res = await fetch("/api/contact", {
+        method: "POST",
         body: JSON.stringify(formState),
         headers: {
-          'Content-Type': 'application/json'
-        }
+          "Content-Type": "application/json",
+        },
       });
       const statusText = await res.text();
       if (res.ok) {
-        toast({ description: <><FontAwesomeIcon icon={faCheck} color="green" /> Your message has been sent.</> });
-        // toast({ description: "Your message has been sent." });
+        toast({
+          description: (
+            <>
+              <FontAwesomeIcon icon={faCheck} color="green" /> Your message has
+              been sent.
+            </>
+          ),
+        });
         setFormState(initialState);
       } else {
         toast({ description: statusText });
       }
     } catch (error) {
       console.error(error);
-      toast({ variant: "destructive", description: 'Failed to send message.' });
+      toast({ variant: "destructive", description: "Failed to send message." });
     }
   };
 
