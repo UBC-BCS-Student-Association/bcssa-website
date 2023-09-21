@@ -5,6 +5,22 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="description"
+          content="UBC Bachelor of Computer Science Student Association"
+        />
+
+        <meta property="og:title" content="UBC BCSSA" />
+        <meta
+          property="og:description"
+          content="UBC Bachelor of Computer Science Student Association"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ubcbcs.ca/" />
+        <meta property="og:image" content="https://i.imgur.com/JQHrDlm.png" />
+
         {GA_MEASUREMENT_ID && (
           <>
             <script
