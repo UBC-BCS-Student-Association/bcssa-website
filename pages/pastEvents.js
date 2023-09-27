@@ -84,6 +84,19 @@ const eventsData = [
       "/events/2023-05-19 BCS Ice Cream Social/D0F00DB8-9BC3-4CD7-B888-AEB363DA6E4A_1_105_c.jpeg",
     ],
   },
+  {
+    eventDate: "2023-04-28 to 2023-4-30",
+    eventName: "American Statistical Association (ASA) DataFest Datathon",
+    eventDescription:
+      "A cross-collaboration event with WiDS and QueerCoded, the Datafest's core mission is to provide our members with the resources they need to build an innovative, large-scale data analysis project that they can add to their portfolio, and gain experience building in a team environment.",
+    eventImages: ["/events/2023-04-28-ASADataFestDatathon/A0IMG_0398.jpeg",
+                  "/events/2023-04-28-ASADataFestDatathon/2.jpeg",
+                  "/events/2023-04-28-ASADataFestDatathon/3.jpeg",
+                  "/events/2023-04-28-ASADataFestDatathon/4.jpeg",
+                  "/events/2023-04-28-ASADataFestDatathon/5.jpeg",
+                  "/events/2023-04-28-ASADataFestDatathon/6.jpeg",
+                  "/events/2023-04-28-ASADataFestDatathon/7.jpeg",],
+  },
 ];
 
 export default function PastEvents() {
