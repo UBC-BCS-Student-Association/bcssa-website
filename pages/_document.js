@@ -19,6 +19,7 @@ export default function Document() {
         <meta property="og:url" content="https://www.ubcbcs.ca/" />
         <meta property="og:image" content="https://i.imgur.com/lJRkENI.jpg" />
 
+        <link rel="icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
