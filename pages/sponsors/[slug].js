@@ -1,34 +1,7 @@
-import { firestore, storage } from "@/firebase/firebase";
+import { firestore } from "@/firebase/firebase";
 import { query, where, collection, getDocs } from "firebase/firestore";
-import { getDownloadURL, ref as storageRef } from "firebase/storage";
+import { getHttpsUrl, formatDate } from "@/lib/utils";
 import SponsorPage from "@/components/SponsorPage";
-
-// Create a reference from a Google Cloud Storage URI
-const getHttpsUrl = async (gsUrl) => {
-  try {
-    const ref = storageRef(
-      storage,
-      gsUrl.replace("gs://bcssa-website.appspot.com/", "")
-    );
-    return await getDownloadURL(ref);
-  } catch (error) {
-    console.error("Error getting download URL: ", error);
-    throw error;
-  }
-};
-
-const formatDate = (dateString) => {
-  const options = { year: "numeric", month: "short", day: "2-digit" };
-  const formatUTCDate = (str) => {
-    const [year, month, day] = str.split("-").map((part) => parseInt(part, 10));
-    return new Date(year, month - 1, day).toLocaleDateString("en-US", options);
-  };
-  if (dateString.includes("to")) {
-    return dateString.split(" to ").map(formatUTCDate).join(" - ");
-  } else {
-    return formatUTCDate(dateString);
-  }
-};
 
 export async function getStaticPaths() {
   const sponsorsRef = collection(firestore, "sponsors");
