@@ -7,26 +7,9 @@ import { Separator } from "@/components/ui/separator";
 import eventStyles from "@/styles/EventItem.module.css";
 import sectionStyles from "@/styles/Section.module.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { formatDate } from "@/lib/utils";
 
 function EventItem({ eventDate, eventDescription, eventImages, eventName }) {
-  const formatDate = (dateString) => {
-    const options = { year: "numeric", month: "short", day: "2-digit" };
-    const formatUTCDate = (str) => {
-      const [year, month, day] = str
-        .split("-")
-        .map((part) => parseInt(part, 10));
-      return new Date(year, month - 1, day).toLocaleDateString(
-        "en-US",
-        options
-      );
-    };
-    if (dateString.includes("to")) {
-      return dateString.split(" to ").map(formatUTCDate).join(" - ");
-    } else {
-      return formatUTCDate(dateString);
-    }
-  };
-
   const formattedEventDate = formatDate(eventDate);
 
   return (
